@@ -17,15 +17,18 @@
           <a href="#news">About</a>
           <a href="#contact">Resume</a>
       </div>
-      <div class="wrapper">
             <!--<header class="header strokeme">
                 <h1 style="margin-top: 0;">Hi,<br>I'm a Designer located in Dallas, Texas<br>
                   I'm most interested in design, programming, <br>and what falls in between.</h1>
             </header>-->
-            <div id="container"></div>
-            <aside class="aside-1"></aside>
-            <footer class="footer">Footer</footer>
-      </div>
+      <div class="wrapper">
+        <div id="container" class="main"></div>
+        <aside class="aside-1">
+          <h1>hi</h1>
+
+        </aside>
+        <footer class="footer">Footer</footer>
+    </div>
 
       <style>
         
@@ -51,6 +54,7 @@
         transition: 0.3s;
         border-radius: 5px;
         margin-bottom: 50px;
+        width: 500px;
         background-color: blue;
       }
 
@@ -104,8 +108,8 @@
 
         // Cards
         function Card(props) {
-            return (
-                <div class="card main">
+            return (              
+                <div class="card">
                     <img src={props.image} class="mainImages"/>
                     <h1 class="cardTitle cardText">{props.name}</h1>
                     <p class="cardText">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur bibendum placerat felis, sed iaculis velit fermentum sed. Mauris posuere, nisi a dignissim pharetra, nibh risus congue lectus, vel tempor lorem metus quis mauris. Fusce scelerisque est vel libero suscipit fringilla. Aenean venenatis at magna ut rhoncus. Fusce consequat ipsum et vehicula sodales. Maecenas dui lorem, ornare in molestie id, aliquam condimentum metus. In ac tellus a lacus pellentesque porta id id justo. Vivamus semper a urna et dignissim. Sed efficitur ex nec vehicula egestas. Nulla congue ante ut erat commodo facilisis id nec ante. </p>

@@ -20,23 +20,25 @@ hr {
   1px 1px 0 #ffffff;  
 }
 
+.aside-1{
+  background-color: yellow;
+}
+
 .wrapper {
-  margin-top: 90px;
   display: flex;  
-  flex-flow: wrap row;
-  flex-wrap: wrap;
+  flex-flow: row wrap;
   font-weight: bold;
+  text-align: center;
+}
+
+.wrapper > * {
+  padding: 10px;
+  flex: 1 100%;
 }
 
 h1{
   font-weight: bold;
   font-size: 50px;
-}
-  
-.wrapper > * {
-  padding: 10px;
-  margin: 10px;
-  flex: 1 100%;
 }
   
 .header {
@@ -72,23 +74,15 @@ h1{
   background: #ddd;
   color: black;
 }
-  
-@media all and (min-width: 400px) {
-  .main    { order: 1; }
-  .aside-1 { order: 2; }
-  .footer  { order: 4; }
-  .main    { order: 2; }
+
+@media all and (min-width: 600px) {
+  .aside { flex: 1 0 0; }
 }
 
-@media (max-width: 1000px) and (min-width: 0px) {
-  .aside-1 { max-width: 100%; } 
-  .main    { max-width: 100%; }
-  .card    { max-width: 100%; }
-}
-  
-@media (min-width: 1000px) {
-    .main    { flex: 3 0px; }
-    .card    { order: 2 ;}
-    .main    { order: 2; }
-    .footer  { order: 4; }
+@media all and (min-width: 800px) {
+  .main    { flex: 3 0px; }
+  .aside-1 { order: 1; } 
+  .main    { order: 2; }
+  .aside-2 { order: 3; }
+  .footer  { order: 4; }
 }
