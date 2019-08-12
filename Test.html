@@ -10,11 +10,8 @@
 <body>
     <div class="wrapper">
         <header class="header">Header</header>
-        <article class="main">
-            <div id="container"></div>
-        </article>
+        <div id="container" class="main"></div>
         <aside class="aside aside-1">Aside 1</aside>
-        <aside class="aside aside-2">Aside 2</aside>
         <footer class="footer">Footer</footer>
     </div>
 </body>
@@ -36,13 +33,15 @@
     const People = ["Orbit App", "Cahal", "Edite"];
     const Pictures = ["OrbitHome.jpg", "https://images.unsplash.com/photo-1564664044569-a0c916520f15?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=900&q=60", "https://images.unsplash.com/photo-1564586867773-1a1a60a0882d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2102&q=80"];
 
-
+    // App Render
     function App() {
+        const pieces = []
+
+        for (let i = 0; i < 3; i++) pieces.push(<Card name={People[i]} image={Pictures[i]}/>)
+
         return(
             <div>
-                <Card name={People[0]} image={Pictures[0]}/>
-                <Card name={People[1]} image={Pictures[1]}/>
-                <Card name={People[2]} image={Pictures[2]}/>
+                {pieces}
             </div>
         )
     }
