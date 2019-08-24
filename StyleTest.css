@@ -11,13 +11,13 @@ font-family: 'IBM Plex Serif', serif;
 
 html{
   font-family: 'IBM Plex Sans', sans-serif;
-  background: #0c1419;
+  background: #121212;
   margin:0;
 }
 
 .header {
-  background: #0c1419;
-  color: #0c1419;
+  background: #121212;
+  color: #121212;
 }
 
 .footer {
@@ -26,7 +26,7 @@ html{
 
 .main {
   text-align: left;
-  background: #0c1419;
+  background: #121212;
 }
 
 .aside-1 {
@@ -66,7 +66,7 @@ html{
 /* Nav Bar */
 .navbar {
   overflow: hidden;
-  background-color: #0c1419;
+  background-color: #121212;
   position: fixed;
   top: 0px;
   box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
@@ -108,16 +108,18 @@ html{
   line-height: 1em;
   font-size: 40px;
   font-family: 'IBM Plex Sans Condensed', sans-serif;
+  margin:0;
 }
 
 .cardText{
   margin: 0px;
-  margin-top: 10px;
-  padding-bottom: 20px;
+  padding: 20px;
 }
 
 .mainImages{
   width: 100%;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
 }
 
 .card {
@@ -125,13 +127,15 @@ html{
   box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
   transition: 0.3s;
   margin-bottom: 50px;
-  background-color: #0c1419;
+  background-color: #1e1e1e;
+  border-radius: 10px;
+  padding:0;
   text-align: left;
   max-width: 45em;
 }
 
 .card:hover {
-  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+  box-shadow: 0 8px 16px 0 #363636;
 }
 
 .button {
@@ -139,8 +143,11 @@ html{
   display: inline-block;
   font: 14px;
   text-decoration: none;
-  background-color: #EEEEEE;
-  color: #333333;
+  background-color: none;
+  border: 2px solid #EEEEEE;
+  border-radius: 5px;
+  margin-top: 15px;
+  color: #EEEEEE;
   padding: 10px 10px 10px 10px;
 }
 
@@ -151,9 +158,11 @@ html{
 }
 
 #container h3{
-    font-size: 20px;
+    font-size: 15px;
     font-weight: 200;
     font-family: 'IBM Plex Sans Condensed', sans-serif;
+    margin:0;
+    color: #dbdbdb;
 }
 
 #container h4{
