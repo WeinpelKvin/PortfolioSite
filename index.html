@@ -1,23 +1,72 @@
 <!DOCTYPE html>
+
 <head>
   <link rel="stylesheet" href="StyleTest.css">
   <script src="https://unpkg.com/react@16/umd/react.development.js"></script>
   <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
   <script src="https://unpkg.com/babel-standalone@6.15.0/babel.min.js"></script>
+  <meta charset="utf-8">
 </head>
 
 <body>
-  <div class="navbar">
+  <div class="navbar" id="Navbar">
     <a style="float: left">Kevin Weinpel</a>
     <a href="#home">Portfolio</a>
     <a href="#news">About</a>
     <a href="#contact">Resume</a>
+    <a href="javascript:void(0);" class="icon" onclick="menuFunction()">
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M0 0h24v24H0z" fill="none"/><path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z" class="phoneMenu"/></svg>
+    </a>
   </div>
-
+  
   <div id="container" style="margin-top: 100px;"></div>
 </body>
 
+<style>
+  .phoneMenu{
+    overflow: hidden;
+    fill: white;
+  }
+
+  .navbar .icon {
+    display: none;
+  }
+
+  @media screen and (max-width: 600px) {
+  .navbar a:not(:first-child) {display: none;}
+  .navbar a.icon {
+    float: right;
+    display: block;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .navbar.responsive .icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  .navbar.responsive a {
+    float: none;
+    display: block;
+    text-align: right;
+  }
+  .header{
+    font-size: 3em;
+  }
+}
+</style>
+
 <script type="text/babel">
+  function menuFunction() {
+    var x = document.getElementById("Navbar");
+    if (x.className === "navbar") {
+      x.className += " responsive";
+    } else {
+      x.className = "navbar";
+    }
+  }
+
   // Cards
   function Card(props) {
     return (              
@@ -102,7 +151,7 @@
     for (let i = 0; i < Projects.length; i++) 
       pieces.push(<Card name={Projects[i].name} image={Projects[i].image} link={Projects[i].link} type={Projects[i].type}/>)
 
-
+  // Wrapper that holds all the page content
   function Wrapper(){
     return(
       <div class="wrapper">
