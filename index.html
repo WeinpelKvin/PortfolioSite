@@ -8,9 +8,9 @@
   <meta charset="utf-8">
 </head>
 
-<body>
+<body style="margin:0px;">
   <div class="navbar" id="Navbar">
-    <a style="float: left">Kevin Weinpel</a>
+    <a style="float: left;">Kevin Weinpel</a>
     <a href="#home">Portfolio</a>
     <a href="#news">About</a>
     <a href="#contact">Resume</a>
@@ -18,7 +18,6 @@
       <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M0 0h24v24H0z" fill="none"/><path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z" class="phoneMenu"/></svg>
     </a>
   </div>
-  
   <div id="container" style="margin-top: 100px;"></div>
 </body>
 
@@ -26,6 +25,7 @@
   .phoneMenu{
     overflow: hidden;
     fill: white;
+    display: block;
   }
 
   .navbar .icon {
@@ -46,12 +46,14 @@
     right: 0;
     top: 0;
   }
+
   .navbar.responsive a {
     float: none;
     display: block;
-    text-align: right;
+    text-align: left;
   }
-  .header{
+  
+  .headerText{
     font-size: 3em;
   }
 }
@@ -88,57 +90,48 @@
       link: "OrbitApp.html",
       type: "Mobile App"
     },
-
     {
       name: "Saltwater Fish Tank",
       image: "Images/FishTank_Home.jpg",
       link: "SaltWaterFishTank.html",
       type: "Application"
     },
-
     {
       name: "Pocket Full Of Sunshine",
       image: "Images/Sunshine_Home.jpg",
       link: "PocketFullOfSunshine.html",
       type: "Movie Branding"
     },
-
     {
       name: "Synesthesia Zine",
       image: "Images/Synesthesia_Home.jpg",
       link: "Synesthesia.html",
       type: "Zine Booklet"
     },
-
     {
       name: "Renzo Piano Exhibit",
       image: "Images/RenzoPiano_Home.jpg",
       link: "RenzoPiano.html",
       type: "Exhibit Branding"
     },
-
     {
       name: "Randsom Note Generator",
       image: "Images/Generator_Home.jpg",
       link: "RansomNote.html",
       type: "Creative Coding"
     },
-
     {
       name: "Earth 2.0 Movie",
       image: "Images/Earth_Home.jpg",
       link: "Earth.html",
       type: "Movie Branding"
     },
-
     {
       name: "Udelco",
       image: "Images/Udelco_Home.jpg",
       link: "Udelco.html",
       type: "Commercial Website"
     },
-
-
     {
       name: "Motherboard",
       image: "Images/Motherboard_Home.jpg",
@@ -155,7 +148,7 @@
   function Wrapper(){
     return(
       <div class="wrapper">
-        <header class="header strokeme">Hi, I'm a User Experience Designer in Dallas, Texas I'm most interested in design, programming, and what falls in between.</header>
+        <header class="header"><h1 class="headerText">Hi, {"\n"}I'm a User Experience Designer in Dallas, Texas {"\n"}I'm most interested in design, programming, and what falls in between.</h1></header>
         <div class="main wrapper">{pieces}</div>
         <footer class="footer">Footer</footer>
       </div>

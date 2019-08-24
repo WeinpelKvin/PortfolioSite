@@ -12,13 +12,12 @@ font-family: 'IBM Plex Serif', serif;
 html{
   font-family: 'IBM Plex Sans', sans-serif;
   background: #0c1419;
+  margin:0;
 }
 
 .header {
   background: #0c1419;
   color: #0c1419;
-  font-family: 'IBM Plex Sans Condensed', sans-serif;
-  font-size: 6em;
 }
 
 .footer {
@@ -71,7 +70,7 @@ html{
   position: fixed;
   top: 0px;
   box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-  width: 99.2%;
+  width: 100%;
 }
 
 .navbar a {
@@ -79,7 +78,8 @@ html{
   display: block;
   color: #f2f2f2;
   text-align: center;
-  padding: 30px;
+  padding: 1.5em;
+  margin-left:0;
   text-decoration: none;
   font-size: 17px;
 }
@@ -91,8 +91,11 @@ html{
 
 /* Text */
 
-.strokeme{
-  color: balck;
+.headerText{
+  font-family: 'IBM Plex Sans Condensed', sans-serif;
+  font-size: 5em;
+  padding: 20px;
+  margin: 0;
   text-shadow:
   -1px -1px 0 #ffffff,
   1px -1px 0 #ffffff,
