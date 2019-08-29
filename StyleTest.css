@@ -18,6 +18,8 @@ html{
 .header {
   background: #121212;
   color: #121212;
+  margin-right: 200px;
+  margin-left: 200px;
 }
 
 .footer {
