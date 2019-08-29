@@ -32,31 +32,7 @@
     display: none;
   }
 
-  @media screen and (max-width: 600px) {
-  .navbar a:not(:first-child) {display: none;}
-  .navbar a.icon {
-    float: right;
-    display: block;
-  }
-}
 
-@media screen and (max-width: 600px) {
-  .navbar.responsive .icon {
-    position: absolute;
-    right: 0;
-    top: 0;
-  }
-
-  .navbar.responsive a {
-    float: none;
-    display: block;
-    text-align: left;
-  }
-  
-  .headerText{
-    font-size: 3em;
-  }
-}
 </style>
 
 <script type="text/babel">
@@ -152,6 +128,7 @@
       <div class="wrapper">
         <header class="header">
           <h1 class="headerText">I'm a User Experience Designer in Dallas, Texas most interested in design, programming, and what falls in between.</h1>
+          <p class="headerSubtext">Some Text</p>
         </header>
         <div class="main wrapper">{pieces}</div>
         <footer class="footer">Footer</footer>

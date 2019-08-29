@@ -18,8 +18,8 @@ html{
 .header {
   background: #121212;
   color: #121212;
-  margin-right: 200px;
-  margin-left: 200px;
+  margin: 10em;
+  margin-top: 2.5em;
 }
 
 .footer {
@@ -105,6 +105,15 @@ html{
   1px 1px 0 #ffffff;  
 }
 
+.headerSubtext{
+  font-family: 'IBM Plex Sans Condensed', sans-serif;
+  font-size: 5em;
+  padding: 20px;
+  margin: 0;
+  align-content: center;
+  color: white;
+}
+
 .cardTitle{
   text-align: left;
   line-height: 1em;
@@ -177,4 +186,32 @@ html{
     font-size: 14px;
     font-weight: 300;
     text-align: left;
+}
+
+@media screen and (max-width: 600px) {
+  .navbar a:not(:first-child) {display: none;}
+  .navbar a.icon {
+    float: right;
+    display: block;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .navbar.responsive .icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  .navbar.responsive a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+  .headerText{
+    font-size: 3em;
+  }
+  .header{
+    margin: 3em;
+    margin-top: 1em;
+  }
 }
