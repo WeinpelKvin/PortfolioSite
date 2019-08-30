@@ -19,6 +19,7 @@ html{
   background: #121212;
   color: #121212;
   margin: 10em;
+  height: 100vh;
   margin-top: 2.5em;
 }
 
@@ -107,8 +108,9 @@ html{
 
 .headerSubtext{
   font-family: 'IBM Plex Sans Condensed', sans-serif;
-  font-size: 5em;
-  padding: 20px;
+  font-weight: 100;
+  font-size: 20px;
+  padding-top: 20px;
   margin: 0;
   align-content: center;
   color: white;
@@ -180,12 +182,6 @@ html{
     font-size: 20px;
     text-align: left;
     line-height: 0;
-}
-
-#container p{
-    font-size: 14px;
-    font-weight: 300;
-    text-align: left;
 }
 
 @media screen and (max-width: 600px) {
