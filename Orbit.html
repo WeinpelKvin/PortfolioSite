@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+
+<head>
+  <link rel="stylesheet" href="StyleTest.css">
+  <script src="https://unpkg.com/react@16/umd/react.development.js"></script>
+  <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+  <script src="https://unpkg.com/babel-standalone@6.15.0/babel.min.js"></script>
+  <meta charset="utf-8">
+</head>
+
+<body>
+    <div class="navbar" id="Navbar">
+        <a style="float: left;">Kevin Weinpel</a>
+        <a href="#home">Portfolio</a>
+        <a href="#news">About</a>
+        <a href="#contact">Resume</a>
+        <a href="javascript:void(0);" class="icon" onclick="menuFunction()">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M0 0h24v24H0z" fill="none"/><path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z" class="phoneMenu"/></svg>
+        </a>
+    </div>
+    <div id="contentPage"></div>
+</body>
+
+<script type="text/babel">
+
+    function Wrapper(){
+        return(
+            <div class="wrapper">
+                <div class="main wrapper"></div>
+                <footer class="footer">Footer</footer>
+            </div>
+        )
+    }
+
+    function App() {
+        return(
+            <Wrapper/>
+        )
+    }
+
+    ReactDom.render(
+        <App />,
+        document.getElementById('contentPage')
+    );
+
+</script>
+</html>

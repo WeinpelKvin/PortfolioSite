@@ -8,7 +8,7 @@
   <meta charset="utf-8">
 </head>
 
-<body style="margin:0px;">
+<body>
   <div class="navbar" id="Navbar">
     <a style="float: left;">Kevin Weinpel</a>
     <a href="#home">Portfolio</a>
@@ -20,20 +20,6 @@
   </div>
   <div id="container" style="margin-top: 100px;"></div>
 </body>
-
-<style>
-  .phoneMenu{
-    overflow: hidden;
-    fill: white;
-    display: block;
-  }
-
-  .navbar .icon {
-    display: none;
-  }
-
-
-</style>
 
 <script type="text/babel">
   function menuFunction() {
@@ -51,7 +37,7 @@
       <div class="card">
         <img src={props.image} class="mainImages"/>
         <div class="cardText">
-            <h3>{props.type}</h3>
+          <h3>{props.type}</h3>
           <h1 class="cardTitle">{props.name}</h1>
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur bibendum placerat felis, sed iaculis velit fermentum sed. Mauris posuere, nisi a dignissim pharetra, nibh risus congue lectus, vel tempor lorem metus quis mauris. Fusce scelerisque est vel libero suscipit fringilla. Aenean venenatis at magna ut rhoncus. Fusce consequat ipsum et vehicula sodales. Maecenas dui lorem, ornare in molestie id, aliquam condimentum metus. In ac tellus a lacus pellentesque porta id id justo. Vivamus semper a urna et dignissim. Sed efficitur ex nec vehicula egestas. Nulla congue ante ut erat commodo facilisis id nec ante. </p>
           <a href={props.link} class="button">Read More</a>
@@ -139,14 +125,14 @@
 
   // App 
   function App() {
-      return(
-        <Wrapper/>
-      )
+    return(
+      <Wrapper/>
+    )
   }
   
   ReactDOM.render(
-      <App />,
-      document.getElementById('container')
+    <App />,
+    document.getElementById('container')
   );
   
 </script>

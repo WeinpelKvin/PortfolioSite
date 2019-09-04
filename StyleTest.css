@@ -14,6 +14,9 @@ html{
   background: #121212;
   margin:0;
 }
+body{
+  margin:0px;
+}
 
 .header {
   background: #121212;
@@ -168,6 +171,16 @@ html{
   transition-duration: 0.4s;
   background-color: crimson;
   color: white;
+}
+
+.phoneMenu{
+  overflow: hidden;
+  fill: white;
+  display: block;
+}
+
+.navbar .icon {
+  display: none;
 }
 
 #container h3{
