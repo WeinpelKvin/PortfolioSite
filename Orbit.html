@@ -23,10 +23,15 @@
 
 <script type="text/babel">
 
-    function Wrapper(){
+    function Wrapper() {
         return(
             <div class="wrapper">
-                <div class="main wrapper"></div>
+                <div class="main contentPageWrapper">
+                    <aside class="aside-1">
+                        <p>hi</p>
+                    </aside>
+                    <div class="main"
+                </div>
                 <footer class="footer">Footer</footer>
             </div>
         )
@@ -38,7 +43,7 @@
         )
     }
 
-    ReactDom.render(
+    ReactDOM.render(
         <App />,
         document.getElementById('contentPage')
     );

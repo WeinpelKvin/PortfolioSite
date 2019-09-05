@@ -68,6 +68,19 @@ body{
   flex: 1 100%;
 }
 
+.contentPageWrapper {
+  display: flex;  
+  flex-flow: row wrap;
+  font-weight: bold;
+  text-align: center;
+  justify-content: space-around;
+}
+
+.contentPageWrapper > * {
+  padding: 10px;
+  margin-top: 80px;
+  flex: 1 100%;
+}
 
 /* Nav Bar */
 .navbar {
