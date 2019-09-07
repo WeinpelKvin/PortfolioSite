@@ -2,7 +2,7 @@
 
 <head>
   <link rel="stylesheet" href="StyleTest.css">
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="contentPage.css">
   <script src="https://unpkg.com/react@16/umd/react.development.js"></script>
   <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
   <script src="https://unpkg.com/babel-standalone@6.15.0/babel.min.js"></script>
@@ -23,16 +23,46 @@
 </body>
 
 <script type="text/babel">
+    function menuFunction() {
+        var x = document.getElementById("Navbar");
+        if (x.className === "navbar") {
+        x.className += " responsive";
+        } else {
+        x.className = "navbar";
+        }
+    }
+
+    function ContentInfo(){
+        return(
+            <div class="InfoPanel">
+                <h1>Orbit App</h1>
+                <p>Orbit is an app designed to show you what events, activities, or just general gatherings are currently happening around you. It does this by making a white circle around the current area where you are in the city and shows you possible events you can race to.</p>  
+                <ol>
+                    <li><a>Research</a></li>
+                    <li><a>Sketch</a></li>
+                    <li><a>Design</a></li>
+                    <li><a>Implement</a></li>
+                </ol>
+            </div>
+        )
+    }
+
+    function ContentMain() {
+        return(
+            <div>
+                <img src="Images/Orbit_Home.jpg" class="contentImages"/>
+                <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>  
+            </div>
+        )
+    }
+
     function Wrapper() {
         return(
         <div class="Contentwrapper">
-            <article class="main">
-            <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>  
-            </article>
-            <aside class="aside aside-1">Aside 1</aside>
+            <article class="main"><ContentMain/></article>
+            <aside class="aside aside-1"><ContentInfo/></aside>
             <footer class="footer">Footer</footer>
         </div>
-            
         )
     }
 

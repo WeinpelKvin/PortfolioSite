@@ -20,15 +20,31 @@
   
   .main {
     text-align: left;
-    background: deepskyblue;
+    color: white;
   }
   
   .aside-1 {
-    background: gold;
   }
   
   .aside-2 {
     background: hotpink;
+  }
+
+  .InfoPanel{
+    text-align: left;
+  }
+
+  .InfoPanel h1{
+    font-size: 30px;
+  }
+
+  .InfoPanel li{
+    font-size: 15px;
+    font-weight:
+  }
+
+  .contentImages{
+    width: 100%;
   }
   
   @media all and (min-width: 600px) {
