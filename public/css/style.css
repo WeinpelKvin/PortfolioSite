@@ -36,11 +36,9 @@ body{
 }
 
 .aside-1 {
-  color: white;
 }
 
 .aside-2 {
-  background: hotpink;
 }
 
 @media screen and (max-width: 600px) {
@@ -226,3 +224,4 @@ body{
     margin-top: 1em;
   }
 }
+
