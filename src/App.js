@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
 import './index.css';
+import '../public/css/style.css'
 
 // Cards
 function Card(props) {
@@ -21,7 +22,7 @@ function Card(props) {
 let Projects = [
   {
     name: "Orbit App",
-    image: "Orbit_Home.jpg",
+    image: "/Images/Orbit_Home.jpg",
     link: "OrbitApp.html",
     type: "Mobile App"
   },
