@@ -7,21 +7,7 @@ import '../public/css/style.css'
 import Navbar from './Components/NavBar.js';
 import Header from './Components/Header.js';
 import Footer from './Components/Footer.js';
-
-// Cards
-function Card(props) {
-  return (              
-    <div class="card">
-      <img src={props.image} alt="" class="mainImages"/>
-      <div class="cardText">
-        <h3>{props.type}</h3>
-        <h1 class="cardTitle">{props.name}</h1>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur bibendum placerat felis, sed iaculis velit fermentum sed. Mauris posuere, nisi a dignissim pharetra, nibh risus congue lectus, vel tempor lorem metus quis mauris. Fusce scelerisque est vel libero suscipit fringilla. Aenean venenatis at magna ut rhoncus. Fusce consequat ipsum et vehicula sodales. Maecenas dui lorem, ornare in molestie id, aliquam condimentum metus. In ac tellus a lacus pellentesque porta id id justo. Vivamus semper a urna et dignissim. Sed efficitur ex nec vehicula egestas. Nulla congue ante ut erat commodo facilisis id nec ante. </p>
-        <a href={props.link} class="button">Read More</a>
-      </div>
-    </div>
-  );
-}
+import Card from './Components/Card.js';
 
 // Projects
 let Projects = [
@@ -82,9 +68,13 @@ let Projects = [
   }
 ]
 
-const pieces = []
-  for (let i = 0; i < Projects.length; i++) 
-    pieces.push(<Card name={Projects[i].name} image={Projects[i].image} link={Projects[i].link} type={Projects[i].type}/>)
+const pieces = [];
+
+for (let i = 0; i < Projects.length; i++) {
+  pieces.push(<Card name={Projects[i].name} image={Projects[i].image} link={Projects[i].link} type={Projects[i].type}/>)
+}
+
+console.log(pieces);
 
 class App extends Component {
   render() {
