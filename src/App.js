@@ -1,7 +1,9 @@
 import React, { Component } from 'react';
+
 import './App.css';
 import './index.css';
 import '../public/css/style.css'
+
 import Navbar from './Components/NavBar.js';
 import Header from './Components/Header.js';
 import Footer from './Components/Footer.js';

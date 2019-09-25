@@ -15,20 +15,8 @@ body{
   flex: 1 100%;
 }
 
-.header {
-}
-
-.footer {
-}
-
 .main {
   text-align: left;
-}
-
-.aside-1 {
-}
-
-.aside-2 {
 }
 
 @media all and (min-width: 600px) {
