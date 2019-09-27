@@ -1,14 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=IBM+Plex+Mono|IBM+Plex+Sans|IBM+Plex+Sans+Condensed|IBM+Plex+Serif&display=swap');
 
-/*
-IBM Fonts
-
-font-family: 'IBM Plex Mono', monospace;
-font-family: 'IBM Plex Sans Condensed', sans-serif;
-font-family: 'IBM Plex Sans', sans-serif;
-font-family: 'IBM Plex Serif', serif;
-*/
-
 html{
   font-family: 'IBM Plex Sans', sans-serif;
   background: #121212;
@@ -62,34 +53,6 @@ body{
 
 .contentContainer {
   margin-top: 80px;
-}
-
-/* Nav Bar */
-.navbar {
-  overflow: hidden;
-  background-color: #121212;
-  position: fixed;
-  padding-top: 0px;
-  top: 0px;
-  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-  width: 100%;
-}
-
-.navbar a {
-  float: right;
-  display: block;
-  color: #f2f2f2;
-  text-align: center;
-  font-weight: 200;
-  padding: 1.5em;
-  margin-left:0;
-  text-decoration: none;
-  font-size: 17px;
-}
-
-.navbar a:hover {
-  background: #ddd;
-  color: black;
 }
 
 /* Text */
@@ -150,25 +113,6 @@ body{
   box-shadow: 0 8px 16px 0 #363636;
 }
 
-.button {
-  text-align:left;
-  display: inline-block;
-  font: 14px;
-  text-decoration: none;
-  background-color: none;
-  border: 2px solid #EEEEEE;
-  border-radius: 5px;
-  margin-top: 15px;
-  color: #EEEEEE;
-  padding: 10px 10px 10px 10px;
-}
-
-.button:hover{
-  transition-duration: 0.4s;
-  background-color: crimson;
-  color: white;
-}
-
 .phoneMenu{
   overflow: hidden;
   fill: white;
@@ -177,6 +121,24 @@ body{
 
 .navbar .icon {
   display: none;
+}
+
+.button {
+  text-align:left;
+  display: inline-block;
+  text-decoration: none;
+  border: 2px solid #EEEEEE;
+  border-radius: 5px;
+  margin-top: 15px;
+  color: #EEEEEE;
+  background: 0%;
+  padding: 10px 10px 10px 10px;
+}
+
+.button:hover{
+  transition-duration: 0.4s;
+  background-color: crimson;
+  color: white;
 }
 
 #container h3{
@@ -194,24 +156,10 @@ body{
 }
 
 @media screen and (max-width: 600px) {
-  .navbar a:not(:first-child) {display: none;}
-  .navbar a.icon {
-    float: right;
-    display: block;
-  }
+
 }
 
 @media screen and (max-width: 600px) {
-  .navbar.responsive .icon {
-    position: absolute;
-    right: 0;
-    top: 0;
-  }
-  .navbar.responsive a {
-    float: none;
-    display: block;
-    text-align: left;
-  }
   .headerText{
     font-size: 3em;
   }

@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import '../../public/css/style.css'
+import '../../public/css/navBar.css';
 
 /*function menuFunction() {
     var x = document.getElementById("Navbar");
