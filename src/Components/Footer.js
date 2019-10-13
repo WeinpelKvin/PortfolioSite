@@ -5,7 +5,7 @@ import '../../public/css/style.css'
 class Footer extends Component{
     render(){
         return (
-            <footer class="footer">hi</footer>
+            <footer class="footer">footer</footer>
         )
     }
 }

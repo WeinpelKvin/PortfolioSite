@@ -8,7 +8,7 @@ class Projects_Component extends Component{
             {
                 name: "Orbit App",
                 image: "/Images/Orbit_Home.jpg",
-                link: "OrbitApp.html",
+                link: "OrbitApp",
                 type: "Mobile App"
             },
             {
@@ -61,13 +61,13 @@ class Projects_Component extends Component{
                 type: "Magazine"
             }];
         const pieces = [];
-
         for (let i = 0; i < Projects.length; i++) {
             pieces.push(<Card name={Projects[i].name} image={Projects[i].image} link={Projects[i].link} type={Projects[i].type}/>)
         }
-
         return (
-            <div class="main wrapper">{pieces}</div>
+            <div class="main wrapper">
+                {pieces}
+            </div>
         )
     }
 }
