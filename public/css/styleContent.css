@@ -5,9 +5,9 @@ body{
 .Contentwrapper {
   display: flex;  
   flex-flow: row wrap;
-  font-weight: bold;
+  font-weight: 200;
   text-align: center;
-  margin: 2em;
+  margin: 1em;
 }
 
 .Contentwrapper > * {
@@ -17,6 +17,11 @@ body{
 
 .main {
   text-align: left;
+}
+
+.contentImages{
+  width: 100%;
+  max-width: 800px;
 }
 
 @media all and (min-width: 600px) {
