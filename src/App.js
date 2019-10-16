@@ -1,9 +1,6 @@
 import React, { Component } from 'react';
 import { BrowserRouter as Router, Switch, Route} from "react-router-dom";
 
-//import {Router, Route, IndexRoute} from "react-router";
-//IndexRoute
-
 import './App.css';
 import './index.css';
 import '../public/css/style.css'

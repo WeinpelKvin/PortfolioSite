@@ -7,20 +7,20 @@ class Card extends Component{
     render(){  
         return (              
             <div class="card fade-in">
-                <img src={this.props.image} alt="" class="mainImages"/>
+                <img src={this.props.cardInfo.image} alt="" class="mainImages"/>
                 <div class="overlay">
                     <div class="cardText">
-                        <h3>{this.props.type}</h3>
-                        <h1>{this.props.name}</h1>
-                        <p>{this.props.shortDescription}</p>
+                        <h3>{this.props.cardInfo.type}</h3>
+                        <h1>{this.props.cardInfo.name}</h1>
+                        <p>{this.props.cardInfo.shortDescription}</p>
                         <Link to={{
                             pathname: "/contentPage",
                             params: {   
-                                name: this.props.name,
-                                image: this.props.image,
-                                type: this.props.type,
-                                shortDescription: this.props.shortDescription,
-                                longDescription: this.props.longDescription
+                                name: this.props.cardInfo.name,
+                                image: this.props.cardInfo.image,
+                                type: this.props.cardInfo.type,
+                                shortDescription: this.props.cardInfo.shortDescription,
+                                longDescription: this.props.cardInfo.longDescription
                             }
                             }} class="button">Read More</Link>
                     </div>

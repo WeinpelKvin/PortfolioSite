@@ -71,7 +71,7 @@ class Projects_Component extends Component{
             }];
         const pieces = [];
         for (let i = 0; i < Projects.length; i++) {
-            pieces.push(<Card name={Projects[i].name} image={Projects[i].image} link={Projects[i].link} type={Projects[i].type} shortDescription={Projects[i].shortDescription} id={i}/>)
+            pieces.push(<Card cardInfo={Projects[i]}/>)
         }
         return (
             <div class="main wrapper">
