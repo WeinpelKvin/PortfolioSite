@@ -4,8 +4,12 @@ import '../../public/css/style.css';
 import '../../public/css/Card.css';
 import {Link} from "react-router-dom";
 
+
+
 class ContentComponent extends Component{
     render(){  
+        const name = this.props.location.params;
+        console.log(name);
         return (    
             <div class="Contentwrapper">
                 <article class="main"><ContentMain/></article>
@@ -18,7 +22,7 @@ class ContentComponent extends Component{
 function ContentInfo(){
     return(
         <div class="InfoPanel">
-            <h1>Orbit Home</h1>
+            <h1>Orbit</h1>
             <p>Orbit is an app designed to show you what events, activities, or just general gatherings are currently happening around you. It does this by making a white circle around the current area where you are in the city and shows you possible events you can race to.</p>  
             <Link to="/portfolio" class="button">back</Link>
         </div>
@@ -35,4 +39,3 @@ function ContentMain() {
 }
 
 export default ContentComponent;
-//<a href={this.props.link} class="button">Read More</a>

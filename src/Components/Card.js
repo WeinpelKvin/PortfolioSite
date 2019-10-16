@@ -13,7 +13,16 @@ class Card extends Component{
                         <h3>{this.props.type}</h3>
                         <h1>{this.props.name}</h1>
                         <p>{this.props.shortDescription}</p>
-                        <Link to="/contentPage" class="button">Read More</Link>
+                        <Link to={{
+                            pathname: "/contentPage",
+                            params: {   
+                                name: this.props.name,
+                                image: this.props.image,
+                                type: this.props.type,
+                                shortDescription: this.props.shortDescription,
+                                longDescription: this.props.longDescription
+                            }
+                            }} class="button">Read More</Link>
                     </div>
                 </div>
             </div>
