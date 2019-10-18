@@ -12,7 +12,7 @@ body{
 
 .Contentwrapper > * {
   padding: 10px;
-  flex: 1 100%;
+  flex: 1 80%;
 }
 
 .main {
@@ -24,17 +24,33 @@ body{
   max-width: 800px;
 }
 
+.InfoPanel{
+  min-width: 200px;
+}
+
 @media all and (min-width: 600px) {
   .aside { flex: 1 0 0; }
   .aside-1 { order: 1; } 
   .main    { order: 2; }
+  .aside-2 { order: 3; }
   .footer  { order: 4; }
+
+  .Contentwrapper{
+    margin:0;
+  }
+  .main{
+    margin:0;
+  }
 }
 
 @media screen and (max-width: 600px) {
   .aside-1 { order: 1; } 
   .main    { order: 2; }
   .footer  { order: 4; }
+  
+  .Contentwrapper{
+    margin:0;
+  }
 }  
 
 @media all and (min-width: 800px) {

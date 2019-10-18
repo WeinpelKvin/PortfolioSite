@@ -7,7 +7,7 @@ class Projects_Component extends Component{
         const Projects = [
             {
                 name: "Orbit App",
-                image: "/Images/Orbit_Home.jpg",
+                image: "Images/Orbit_Home.jpg",
                 link: "OrbitApp",
                 type: "Mobile App",
                 shortDescription: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur bibendum placerat felis, sed iaculis velit fermentum sed. Mauris posuere, nisi a dignissim pharetra, nibh risus congue lectus, vel. ",
@@ -17,22 +17,25 @@ class Projects_Component extends Component{
                 name: "Saltwater Fish Tank",
                 image: "Images/FishTank_Home.jpg",
                 link: "SaltWaterFishTank.html",
-                type: "Application",
-                shortDescription: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur bibendum placerat felis, sed iaculis velit fermentum sed. Mauris posuere, nisi a dignissim pharetra, nibh risus congue lectus, vel. ",
+                type: "Web Application",
+                shortDescription: "From this application the user can see the problems in their tank through sensors placed around; temperature, salinity, pH, Alkalinity, etc. They also have a schedule function to keep track of all their tank routine. ",                
+                longDescription: "From this application the user can see the problems in their tank through sensors placed around; temperature, salinity, pH, Alkalinity, etc. They also have a schedule function to keep track of all their tank routine. "
             },
             {
                 name: "Pocket Full Of Sunshine",
                 image: "Images/Sunshine_Home.jpg",
                 link: "PocketFullOfSunshine.html",
                 type: "Movie Branding",
-                shortDescription: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur bibendum placerat felis, sed iaculis velit fermentum sed. Mauris posuere, nisi a dignissim pharetra, nibh risus congue lectus, vel. ",
+                shortDescription: "The plot of the short film is about an innocent ex-convict named Marcus who struggles with his life outside of prison, especially finding a job and staying away from the people from his past.",
+                longDescription: "The plot of the short film is about an innocent ex-convict named Marcus who struggles with his life outside of prison, especially finding a job and staying away from the people from his past."
             },
             {
                 name: "Synesthesia Zine",
                 image: "Images/Synesthesia_Home.jpg",
                 link: "Synesthesia.html",
                 type: "Zine Booklet",
-                shortDescription: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur bibendum placerat felis, sed iaculis velit fermentum sed. Mauris posuere, nisi a dignissim pharetra, nibh risus congue lectus, vel. ",
+                shortDescription: "A 30 page booklet designed to teach people about the history and modern day perception about Synesthesia, a disease that is not well known due to the nature of it.",
+                longDescription: "A 30 page booklet designed to teach people about the history and modern day perception about Synesthesia, a disease that is not well known due to the nature of it. "
             },
             {
                 name: "Renzo Piano Exhibit",
@@ -40,6 +43,7 @@ class Projects_Component extends Component{
                 link: "RenzoPiano.html",
                 type: "Exhibit Branding",
                 shortDescription: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur bibendum placerat felis, sed iaculis velit fermentum sed. Mauris posuere, nisi a dignissim pharetra, nibh risus congue lectus, vel. ",
+                longDescription: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur bibendum placerat felis, sed iaculis velit fermentum sed. Mauris posuere, nisi a dignissim pharetra, nibh risus congue lectus, vel. "
             },
             {
                 name: "Randsom Note Generator",
@@ -47,6 +51,7 @@ class Projects_Component extends Component{
                 link: "RansomNote.html",
                 type: "Creative Coding",
                 shortDescription: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur bibendum placerat felis, sed iaculis velit fermentum sed. Mauris posuere, nisi a dignissim pharetra, nibh risus congue lectus, vel. ",
+                longDescription: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur bibendum placerat felis, sed iaculis velit fermentum sed. Mauris posuere, nisi a dignissim pharetra, nibh risus congue lectus, vel. "
             },
             {
                 name: "Earth 2.0 Movie",
@@ -54,6 +59,7 @@ class Projects_Component extends Component{
                 link: "Earth.html",
                 type: "Movie Branding",
                 shortDescription: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur bibendum placerat felis, sed iaculis velit fermentum sed. Mauris posuere, nisi a dignissim pharetra, nibh risus congue lectus, vel. ",
+                longDescription: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur bibendum placerat felis, sed iaculis velit fermentum sed. Mauris posuere, nisi a dignissim pharetra, nibh risus congue lectus, vel. ",
             },
             {
                 name: "Udelco",
@@ -61,6 +67,7 @@ class Projects_Component extends Component{
                 link: "Udelco.html",
                 type: "Commercial Website",
                 shortDescription: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur bibendum placerat felis, sed iaculis velit fermentum sed. Mauris posuere, nisi a dignissim pharetra, nibh risus congue lectus, vel. ",
+                longDescription: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur bibendum placerat felis, sed iaculis velit fermentum sed. Mauris posuere, nisi a dignissim pharetra, nibh risus congue lectus, vel. ",
             },
             {
                 name: "Motherboard",
@@ -68,10 +75,12 @@ class Projects_Component extends Component{
                 link: "Motherboard.html",
                 type: "Magazine",
                 shortDescription: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur bibendum placerat felis, sed iaculis velit fermentum sed. Mauris posuere, nisi a dignissim pharetra, nibh risus congue lectus, vel. ",
+                longDescription: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur bibendum placerat felis, sed iaculis velit fermentum sed. Mauris posuere, nisi a dignissim pharetra, nibh risus congue lectus, vel. ",
             }];
+            
         const pieces = [];
         for (let i = 0; i < Projects.length; i++) {
-            pieces.push(<Card cardInfo={Projects[i]}/>)
+            pieces.push(<Card key={i} cardInfo={Projects[i]}/>)
         }
         return (
             <div class="main wrapper">
