@@ -107,21 +107,31 @@ body{
 }
 
 #container h3{
-    font-size: 15px;
-    font-weight: 200;
-    font-family: 'IBM Plex Sans Condensed', sans-serif;
-    margin:0;
-    color: #dbdbdb;
+  font-size: 15px;
+  font-weight: 200;
+  font-family: 'IBM Plex Sans Condensed', sans-serif;
+  margin:0;
+  color: #dbdbdb;
 }
 
 #container h4{
-    font-size: 20px;
-    text-align: left;
-    line-height: 0;
+  font-size: 20px;
+  text-align: left;
+  line-height: 0;
 }
 
 @media screen and (max-width: 600px) {
 
+}
+
+@media screen and (max-width: 1200px) {
+  .headerText{
+    font-size: 4em;
+  }
+  .header{
+    margin: 4em;
+    margin-top: 1em;
+  }
 }
 
 @media screen and (max-width: 600px) {

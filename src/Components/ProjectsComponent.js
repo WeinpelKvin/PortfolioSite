@@ -83,7 +83,7 @@ class Projects_Component extends Component{
             pieces.push(<Card key={i} cardInfo={Projects[i]}/>)
         }
         return (
-            <div class="main wrapper">
+            <div className="main wrapper">
                 {pieces}
             </div>
         )

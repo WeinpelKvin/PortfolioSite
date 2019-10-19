@@ -13,6 +13,7 @@
     height: auto;
     transition: .5s ease;
     backface-visibility: hidden;
+    min-width: 15s0px;
 }
 
 .card .overlay {
@@ -47,9 +48,9 @@
     margin:0;
 }
 
-.cardText{
-    margin: 0px;
-    padding: 20px;
+.card h3{
+    margin:0;
+    padding: 0;
 }
 
 .card {
@@ -64,8 +65,23 @@
     max-width: 45em;
 }
 
-
-
+@media screen and (max-width: 600px) {
+    .card p{
+        font-size: 1em;
+        line-height: 20px;
+    }
+    .card overlay{
+        top: 70%;
+        left: 70%;
+    }
+    .card h1{
+        font-size: 20px;
+    }
+    .card h3{
+        font-size: 10px;
+        padding: 2px
+    }
+  }
 
 /* make keyframes that tell the start state and the end state of our object */
 @-webkit-keyframes fadeIn { from { opacity:0; } to { opacity:1; } }

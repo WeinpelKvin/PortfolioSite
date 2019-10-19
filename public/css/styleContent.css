@@ -24,8 +24,16 @@ body{
   max-width: 800px;
 }
 
+.contentImages:hover{
+  cursor: pointer;
+}
+
 .InfoPanel{
   min-width: 200px;
+}
+.infoDescription{
+  font-size: 14px;
+  text-align: left;
 }
 
 @media all and (min-width: 600px) {
