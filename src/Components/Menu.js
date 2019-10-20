@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-const { Motion, spring, presets } = ReactMotion;
+//const { Motion, spring, presets } = ReactMotion;
 
 class Menu extends Component {
   constructor() {

@@ -1,10 +1,6 @@
 import React, {Component} from 'react';
 import '../../public/css/navBar.css';
 import {Link} from "react-router-dom";
-//import Menu from './Menu.js';    
-
-
-// 
 
 class NavBar extends Component{  
     constructor(props) {
@@ -12,6 +8,7 @@ class NavBar extends Component{
         this.state = {responsive: false};
     }
     render(){
+
         function menuPopup(){
             var x = document.getElementById("Navbar");
             if (x.className === "navbar") {
@@ -20,9 +17,10 @@ class NavBar extends Component{
                 x.className = "navbar";
             }
         }
+
         function collapse(){
             var x = document.getElementById("Navbar");
-            if (x.className == "navbar responsive"){
+            if (x.className === "navbar responsive"){
                 x.className = "navbar";
             }
         }
@@ -48,4 +46,5 @@ class NavBar extends Component{
 //     const menuBtn = document.getElementById("menuBtn");
 //     return menuBtn.addEventListener('click', NavBar.myFunction, false);
 // }
+//                        <svg width="24" height="24" viewBox="0 0 24 24"><path d="M0 0h24v24H0z" fill="none"/><path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z" className="phoneMenu"/></svg>
 export default NavBar;

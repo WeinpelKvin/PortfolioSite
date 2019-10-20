@@ -2,7 +2,7 @@
 
 html{
   font-family: 'IBM Plex Sans', sans-serif;
-  background: #121212;
+  background: #333333;
   margin:0;
 }
 body{
@@ -10,8 +10,8 @@ body{
 }
 
 .header {
-  background: #121212;
-  color: #121212;
+  background: #333333;
+  color: #333333;
   margin: 10em;
   height: 100vh;
   margin-top: 2.5em;
@@ -23,7 +23,7 @@ body{
 
 .main {
   text-align: left;
-  background: #121212;
+  background: #333333;
 }
 
 @media screen and (max-width: 600px) {
