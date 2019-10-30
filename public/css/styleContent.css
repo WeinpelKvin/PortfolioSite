@@ -8,6 +8,7 @@ body{
   font-weight: 200;
   text-align: center;
   margin: 1em;
+  max-width: 1200px;
 }
 
 .Contentwrapper > * {
@@ -21,7 +22,6 @@ body{
 
 .contentImages{
   width: 100%;
-  max-width: 800px;
 }
 
 .contentImages:hover{
