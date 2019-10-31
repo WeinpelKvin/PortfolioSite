@@ -6,11 +6,3 @@ import './index.css';
 const app = document.getElementById('root');
 
 ReactDOM.render(<App/>, app);
-
-
-/*
-ReactDOM.render(
-  <App />,
-  document.getElementById('root')
-);
-*/

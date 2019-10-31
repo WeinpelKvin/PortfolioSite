@@ -43,7 +43,7 @@ body{
   flex-flow: row wrap;
   font-weight: bold;
   text-align: center;
-  justify-content: space-around;
+  justify-content: center;
 }
 
 .wrapper > * {
