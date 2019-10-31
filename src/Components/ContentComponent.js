@@ -10,12 +10,25 @@ class ContentComponent extends Component{
         this.state = {};
     }
     render(){  
+        const project = this.props.location.params;
+
         function popUpModal(){
             alert("image clicked");
         }
-        const project = this.props.location.params;
-        return (    
-            <div className="Contentwrapper">
+
+        const RenderContent=()=>{
+            //const contentRow = [];
+            for (let i = 0; i < project.content.length; i++) {
+                const len = project.content[i].length;
+                let sub = project.content[i].substring(len-3, len);
+                if(sub === "png" || sub === "jpg"){
+                    console.log("image " + project.content[i])
+                }else{
+                    console.log("paragraph " +project.content[i])
+                }
+               // contentRow.push(<Card key={i} cardInfo={Projects[i]}/>)
+            }
+            return(
                 <aside className="main">
                     <img 
                         src={project.image} 
@@ -31,6 +44,12 @@ class ContentComponent extends Component{
                         onClick={popUpModal}
                     />
                 </aside>
+            )
+        }
+
+        return (    
+            <div className="Contentwrapper">
+                <RenderContent/>
                 <article className="aside aside-1">
                     <div className="InfoPanel">
                         <h1>{project.name}</h1>
