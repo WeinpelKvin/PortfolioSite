@@ -24,6 +24,12 @@ class ContentComponent extends Component{
                         onClick={popUpModal}
                     />
                     <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>  
+                    <img 
+                        src={project.content[0]} 
+                        className="contentImages" 
+                        alt=""
+                        onClick={popUpModal}
+                    />
                 </aside>
                 <article className="aside aside-1">
                     <div className="InfoPanel">

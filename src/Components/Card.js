@@ -20,7 +20,8 @@ class Card extends Component{
                                 image: this.props.cardInfo.image,
                                 type: this.props.cardInfo.type,
                                 shortDescription: this.props.cardInfo.shortDescription,
-                                longDescription: this.props.cardInfo.longDescription
+                                longDescription: this.props.cardInfo.longDescription,
+                                content: this.props.cardInfo.content
                             }
                             }} className="button">Read More</Link>
                     </div>

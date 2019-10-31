@@ -11,7 +11,8 @@ class Projects_Component extends Component{
                 link: "OrbitApp",
                 type: "Mobile App",
                 shortDescription: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur bibendum placerat felis, sed iaculis velit fermentum sed. Mauris posuere, nisi a dignissim pharetra, nibh risus congue lectus, vel. ",
-                longDescription: "Orbit is an app designed to show you what events, activities, or just general gatherings are currently happening around you. It does this by making a white circle around the current area where you are in the city and shows you possible events you can race to."
+                longDescription: "Orbit is an app designed to show you what events, activities, or just general gatherings are currently happening around you. It does this by making a white circle around the current area where you are in the city and shows you possible events you can race to.",
+                content: ["Images/Orbit/OrbitContent_1.png", "Images/Orbit/OrbitContent_2.png", "Images/Orbit/OrbitContent_3.png", "Images/Orbit/OrbitContent_4.png", "Images/Orbit/OrbitContent_5.png"]
             },
             {
                 name: "Saltwater Fish Tank",
