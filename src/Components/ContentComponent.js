@@ -45,7 +45,6 @@ class ContentComponent extends Component{
                     console.log("paragraph " +project.content[i])
                     contentList.push(<Pg key={i} name={project.content[i]}/>)
                 }
-               // contentRow.push(<Card key={i} cardInfo={Projects[i]}/>)
             }
             return(
                 <aside className="main">
@@ -71,10 +70,11 @@ class ContentComponent extends Component{
             <div className="Contentwrapper">
                 <RenderContent/>
                 <article className="aside aside-1">
-                    <div className="InfoPanel">
+                    <div className="infoPanel">
                         <h1>{project.name}</h1>
                         <p className="infoDescription">{project.longDescription}</p>  
-                        <Link to="/portfolio" className="button">back</Link>
+                        <Link to="/portfolio" className="button infoButtons">back</Link>
+                        <Link to="/portfolio" className="button infoButtons">next</Link>
                     </div>
                 </article>
             </div>

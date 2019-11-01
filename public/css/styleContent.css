@@ -22,18 +22,32 @@ body{
 
 .contentImages{
   width: 100%;
+  margin: 25px 0 25px 0;
 }
 
 .contentImages:hover{
   cursor: pointer;
 }
 
-.InfoPanel{
+.infoPanel{
   min-width: 200px;
 }
+
 .infoDescription{
   font-size: 14px;
   text-align: left;
+}
+
+.infoButtons{
+  margin-left: 20px;
+  margin-right: 20px;
+  padding: 10px 20px 10px 20px;
+}
+
+.btnFilled{
+  background-color: white;
+  color: #333333;
+  font-weight: 900;
 }
 
 @media all and (min-width: 600px) {
