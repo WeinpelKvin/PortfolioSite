@@ -17,14 +17,33 @@ class ContentComponent extends Component{
         }
 
         const RenderContent=()=>{
-            //const contentRow = [];
+            const contentList = [];
+
+            const Image = (props) =>{
+                return(
+                    <img 
+                        src={props.name} 
+                        className="contentImages" 
+                        alt=""
+                        onClick={popUpModal}
+                    />
+                )
+            }
+
+            const Pg = (props) =>{
+                return(
+                    <p>{props.name}</p>
+                )
+            }
+
             for (let i = 0; i < project.content.length; i++) {
                 const len = project.content[i].length;
                 let sub = project.content[i].substring(len-3, len);
                 if(sub === "png" || sub === "jpg"){
-                    console.log("image " + project.content[i])
+                    contentList.push(<Image key={i} name={project.content[i]}/>)
                 }else{
                     console.log("paragraph " +project.content[i])
+                    contentList.push(<Pg key={i} name={project.content[i]}/>)
                 }
                // contentRow.push(<Card key={i} cardInfo={Projects[i]}/>)
             }
@@ -43,6 +62,7 @@ class ContentComponent extends Component{
                         alt=""
                         onClick={popUpModal}
                     />
+                    {contentList}
                 </aside>
             )
         }
