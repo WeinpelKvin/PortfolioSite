@@ -3,6 +3,7 @@ import '../../public/css/styleContent.css';
 import '../../public/css/style.css'; 
 import '../../public/css/Card.css';
 import {Link} from "react-router-dom";
+import Projects from '../Projects.json';   
 
 class ContentComponent extends Component{
     constructor(props) {
@@ -10,7 +11,30 @@ class ContentComponent extends Component{
         this.state = {};
     }
     render(){  
-        const project = this.props.location.params;
+
+        // Determines the current, next, or previous project in array
+        const project = Projects[this.props.location.params.key];
+
+        let nextProject;
+        let previousProject;
+        console.log("Key " + project.key);
+
+        if((project.key+1) <= Projects.length-1) {
+            nextProject= (project.key+1); 
+        }
+        else {
+            nextProject = 0; 
+        }
+        console.log("Next " + nextProject);
+
+        if((project.key-1) >= 0) {
+            previousProject = (project.key-1); 
+        }
+        else {
+            previousProject = (Projects.length-1);
+        }
+        console.log("Previous " + previousProject);
+
 
         function popUpModal(){
             alert("image clicked");
@@ -42,30 +66,14 @@ class ContentComponent extends Component{
                 if(sub === "png" || sub === "jpg"){
                     contentList.push(<Image key={i} name={project.content[i]}/>)
                 }else{
-                    console.log("paragraph " +project.content[i])
                     contentList.push(<Pg key={i} name={project.content[i]}/>)
                 }
             }
             return(
-                <aside className="main">
-                    <img 
-                        src={project.image} 
-                        className="contentImages" 
-                        alt=""
-                        onClick={popUpModal}
-                    />
-                    <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>  
-                    <img 
-                        src={project.content[0]} 
-                        className="contentImages" 
-                        alt=""
-                        onClick={popUpModal}
-                    />
-                    {contentList}
-                </aside>
+                <aside className="main">{contentList}</aside>
             )
         }
-
+        
         return (    
             <div className="Contentwrapper">
                 <RenderContent/>
@@ -73,13 +81,37 @@ class ContentComponent extends Component{
                     <div className="infoPanel">
                         <h1>{project.name}</h1>
                         <p className="infoDescription">{project.longDescription}</p>  
-                        <Link to="/portfolio" className="button infoButtons">back</Link>
-                        <Link to="/portfolio" className="button infoButtons">next</Link>
+
+                        <Link to={{
+                            pathname: "/contentPage",
+                            params: {   
+                                key: previousProject,
+                                name: Projects[previousProject].name,
+                                image: Projects[previousProject].image,
+                                type: Projects[previousProject].type,
+                                shortDescription: Projects[previousProject].shortDescription,
+                                longDescription: Projects[previousProject].longDescription,
+                                content: Projects[previousProject].content
+                            }
+                        }} className="button">back</Link>      
+
+                        <Link to={{
+                            pathname: "/contentPage",
+                            params: {   
+                                key: nextProject,
+                                name: Projects[nextProject].name,
+                                image: Projects[nextProject].image,
+                                type: Projects[nextProject].type,
+                                shortDescription: Projects[nextProject].shortDescription,
+                                longDescription: Projects[nextProject].longDescription,
+                                content: Projects[nextProject].content
+                            }
+                        }} className="button">next</Link> 
+
                     </div>
                 </article>
             </div>
         )
     }
 }
-
 export default ContentComponent;

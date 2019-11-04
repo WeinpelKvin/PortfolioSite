@@ -2,28 +2,31 @@ import React, {Component} from 'react';
 import '../../public/css/style.css'; 
 import '../../public/css/Card.css';
 import {Link} from "react-router-dom";
+import Projects from '../Projects.json';   
     
 class Card extends Component{
     render(){  
+        const cardInfo = Projects[this.props.cardInfo.key];
         return (              
             <div className="card fade-in">
-                <img src={this.props.cardInfo.image} alt="" className="mainImages"/>
+                <img src={cardInfo.image} alt="" className="mainImages"/>
                 <div className="overlay">
                     <div className="cardText">
-                        <h3>{this.props.cardInfo.type}</h3>
-                        <h1>{this.props.cardInfo.name}</h1>
-                        <p>{this.props.cardInfo.shortDescription}</p>
+                        <h3>{cardInfo.type}</h3>
+                        <h1>{cardInfo.name}</h1>
+                        <p>{cardInfo.shortDescription}</p>
                         <Link to={{
                             pathname: "/contentPage",
                             params: {   
-                                name: this.props.cardInfo.name,
-                                image: this.props.cardInfo.image,
-                                type: this.props.cardInfo.type,
-                                shortDescription: this.props.cardInfo.shortDescription,
-                                longDescription: this.props.cardInfo.longDescription,
-                                content: this.props.cardInfo.content
+                                key: cardInfo.key,
+                                name: cardInfo.name,
+                                image: cardInfo.image,
+                                type: cardInfo.type,
+                                shortDescription: cardInfo.shortDescription,
+                                longDescription: cardInfo.longDescription,
+                                content: cardInfo.content
                             }
-                            }} className="button">Read More</Link>
+                        }} className="button">Read More</Link>
                     </div>
                 </div>
             </div>
