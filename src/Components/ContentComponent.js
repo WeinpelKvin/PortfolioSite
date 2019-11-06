@@ -42,7 +42,6 @@ class ContentComponent extends Component{
 
         const RenderContent=()=>{
             const contentList = [];
-
             const Image = (props) =>{
                 return(
                     <img 
@@ -53,18 +52,25 @@ class ContentComponent extends Component{
                     />
                 )
             }
-
             const Pg = (props) =>{
                 return(
                     <p>{props.name}</p>
                 )
             }
+            const H1 = (props) =>{
+                return(
+                    <h1>(props.name)</h1>
+                )
+            }
 
+            // Figures out what type of content is going to be rendered
             for (let i = 0; i < project.content.length; i++) {
                 const len = project.content[i].length;
                 let sub = project.content[i].substring(len-3, len);
                 if(sub === "png" || sub === "jpg"){
                     contentList.push(<Image key={i} name={project.content[i]}/>)
+                }else if(sub === " h1"){
+                    contentList.push(<H1 key={i} name={project.content[i]}/>)
                 }else{
                     contentList.push(<Pg key={i} name={project.content[i]}/>)
                 }
@@ -93,7 +99,7 @@ class ContentComponent extends Component{
                                 longDescription: Projects[previousProject].longDescription,
                                 content: Projects[previousProject].content
                             }
-                        }} className="button">back</Link>      
+                        }} className="button infoButton">prev</Link>      
 
                         <Link to={{
                             pathname: "/contentPage",
@@ -106,7 +112,7 @@ class ContentComponent extends Component{
                                 longDescription: Projects[nextProject].longDescription,
                                 content: Projects[nextProject].content
                             }
-                        }} className="button">next</Link> 
+                        }} className="button infoButton">next</Link> 
 
                     </div>
                 </article>

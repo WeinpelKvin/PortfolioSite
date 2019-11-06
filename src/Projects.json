@@ -152,5 +152,35 @@
             "Images/Orbit/OrbitContent_4.png", 
             "Images/Orbit/OrbitContent_5.png"
         ]
+    },
+    {
+        "key": 9,
+        "name": "SA Main Site",
+        "image": "Images/saMainSite/Account.png",
+        "link": "Motherboard.html",
+        "type": "Magazine",
+        "shortDescription": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur bibendum placerat felis, sed iaculis velit fermentum sed. Mauris posuere, nisi a dignissim pharetra, nibh risus congue lectus, vel. ",
+        "longDescription": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur bibendum placerat felis, sed iaculis velit fermentum sed. Mauris posuere, nisi a dignissim pharetra, nibh risus congue lectus, vel. ",
+        "content": [  
+            "Images/saMainSite/Account.png", 
+            "paragraph about the image",
+            "Images/saMainSite/AccountScrolled.png", 
+            "Images/saMainSite/JobReview.png"
+        ]
+    },
+    {
+        "key": 10,
+        "name": "Manage Services",
+        "image": "Images/ManageServices_Card.png",
+        "link": "Motherboard.html",
+        "type": "Web Services / Mobile App",
+        "shortDescription": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur bibendum placerat felis, sed iaculis velit fermentum sed. Mauris posuere, nisi a dignissim pharetra, nibh risus congue lectus, vel. ",
+        "longDescription": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur bibendum placerat felis, sed iaculis velit fermentum sed. Mauris posuere, nisi a dignissim pharetra, nibh risus congue lectus, vel. ",
+        "content": [  
+            "Images/saMainSite/Account.png", 
+            "paragraph about the image",
+            "Images/saMainSite/AccountScrolled.png", 
+            "Images/saMainSite/JobReview.png"
+        ]
     }
 ]
