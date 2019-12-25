@@ -50,6 +50,11 @@ body{
   font-weight: 900;
 }
 
+.projectHeader{
+  font-size: 20px;
+  margin: 0;
+}
+
 @media all and (min-width: 600px) {
   .aside { flex: 1 0 0; }
   .aside-1 { order: 1; } 

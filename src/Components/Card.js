@@ -35,4 +35,3 @@ class Card extends Component{
 }
 
 export default Card;
-//<a href={this.props.link} class="button">Read More</a>

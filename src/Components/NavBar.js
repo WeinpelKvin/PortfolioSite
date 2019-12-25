@@ -30,7 +30,6 @@ class NavBar extends Component{
                     <Link to="/" className="navHome">Kevin Weinpel</Link>
                     <Link to="/portfolio" className="navItem" onClick={collapse}>Portfolio</Link>
                     <Link to="/about" className="navItem" onClick={collapse}>About</Link>
-                    <Link to="/resume" className="navItem" onClick={collapse}>Other Work</Link>
                     <Link to="/resume" className="navItem" onClick={collapse}>Resume</Link>
                     <a className="icon navItem" id="menuBtn" onClick={menuPopup}>
                         <svg width="24" height="24" viewBox="0 0 24 24"><path d="M0 0h24v24H0z" fill="none"/><path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z" className="phoneMenu"/></svg>

@@ -10,10 +10,56 @@ body{
 }
 
 .header {
-  background: #333333;
-  color: #333333;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  margin: 50px;
   height: 100vh;
-  margin-top: 2.5em;
+}
+
+.handImage{
+  padding: 20px;
+  flex: 1;
+}
+
+/* Text */
+.headerText{
+  font-family: 'IBM Plex Sans Condensed', sans-serif;
+  font-size: 30px;
+  padding: 20px;
+  color: #74ddb1;
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+  flex-basis: 100%;
+  flex: 10
+}
+
+.columnHalf {
+  display: flex;
+  flex-direction: column;
+  flex-basis: 50%;
+  flex: 2
+}
+
+.headerText h1{
+  margin-top: 0;
+}
+
+.headerSubtext{
+  font-family: 'IBM Plex Sans Condensed', sans-serif;
+  padding: 20px;
+
+}
+
+.outlineText{
+  text-shadow:
+  -1px -1px 0 #ffffff,
+  1px -1px 0 #ffffff,
+  -1px 1px 0 #ffffff,
+  1px 1px 0 #ffffff;  
 }
 
 .footer {
@@ -40,41 +86,18 @@ body{
 .wrapper {
   display: flex;  
   flex-flow: row wrap;
+  flex-grow: 1;
   font-weight: bold;
-  text-align: center;
   justify-content: center;
 }
 
 .wrapper > * {
-  padding: 10px;
+  padding: 0px;
   flex: 1 100%;
 }
 
 .contentContainer {
   margin-top: 80px;
-}
-
-/* Text */
-.headerText{
-  font-family: 'IBM Plex Sans Condensed', sans-serif;
-  font-size: 5em;
-  padding: 20px;
-  margin: 0;
-  text-shadow:
-  -1px -1px 0 #ffffff,
-  1px -1px 0 #ffffff,
-  -1px 1px 0 #ffffff,
-  1px 1px 0 #ffffff;  
-}
-
-.headerSubtext{
-  font-family: 'IBM Plex Sans Condensed', sans-serif;
-  font-weight: 100;
-  font-size: 20px;
-  padding-top: 20px;
-  margin: 0;
-  align-content: center;
-  color: white;
 }
 
 .phoneMenu{
@@ -124,21 +147,10 @@ body{
 }
 
 @media screen and (max-width: 1200px) {
-  .headerText{
-    font-size: 4em;
-  }
-  .header{
-    margin: 4em;
-    margin-top: 1em;
-  }
+
+
 }
 
 @media screen and (max-width: 600px) {
-  .headerText{
-    font-size: 3em;
-  }
-  .header{
-    margin: 3em;
-    margin-top: 1em;
-  }
+
 }

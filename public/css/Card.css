@@ -5,7 +5,7 @@
     height: auto;
     transition: .5s ease;
     backface-visibility: hidden;
-    min-width: 150px;
+    /*cursor: pointer;*/
 }
 
 .card .overlay {

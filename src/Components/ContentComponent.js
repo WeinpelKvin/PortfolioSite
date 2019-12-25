@@ -76,18 +76,20 @@ class ContentComponent extends Component{
                 }
             }
             return(
-                <aside className="main">{contentList}</aside>
+                <div className="main">
+                    <div className="projectHeader">
+                        <h1>{project.name}</h1>
+                    </div>
+                    {contentList}
+                </div>
             )
         }
-        
+
         return (    
             <div className="Contentwrapper">
                 <RenderContent/>
                 <article className="aside aside-1">
                     <div className="infoPanel">
-                        <h1>{project.name}</h1>
-                        <p className="infoDescription">{project.longDescription}</p>  
-
                         <Link to={{
                             pathname: "/contentPage",
                             params: {   
@@ -100,7 +102,6 @@ class ContentComponent extends Component{
                                 content: Projects[previousProject].content
                             }
                         }} className="button infoButton">prev</Link>      
-
                         <Link to={{
                             pathname: "/contentPage",
                             params: {   
@@ -113,7 +114,7 @@ class ContentComponent extends Component{
                                 content: Projects[nextProject].content
                             }
                         }} className="button infoButton">next</Link> 
-
+                        <p className="infoDescription">{project.longDescription}</p>  
                     </div>
                 </article>
             </div>
