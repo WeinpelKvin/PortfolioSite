@@ -27,7 +27,6 @@ body{
   font-family: 'IBM Plex Sans Condensed', sans-serif;
   font-size: 30px;
   padding: 20px;
-  color: #74ddb1;
 }
 
 .buttonHeader{
@@ -50,11 +49,14 @@ body{
 
 .headerText h1{
   margin-top: 0;
+  margin:0;
+  color: #74ddb1;
 }
 
 .headerSubtext{
   font-family: 'IBM Plex Sans Condensed', sans-serif;
   padding: 20px;
+  color: #999999;
 
 }
 
