@@ -30,6 +30,10 @@ body{
   color: #74ddb1;
 }
 
+.buttonHeader{
+  width: 200px;
+}
+
 .column {
   display: flex;
   flex-direction: column;
@@ -111,7 +115,7 @@ body{
 }
 
 .button {
-  text-align:left;
+  text-align:center;
   display: inline-block;
   text-decoration: none;
   border: 2px solid #EEEEEE;

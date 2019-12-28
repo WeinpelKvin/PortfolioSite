@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import {Link} from "react-router-dom";
 import '../../public/css/style.css' 
     
 class Header extends Component {
@@ -13,6 +14,7 @@ class Header extends Component {
                 </div>
                 <div className="headerText column">
                     <h1>I'm a UX / UI Designer in Dallas, Texas interested in design, programming, and what falls in between.</h1>
+                    <Link to="/portfolio" className="button buttonHeader">See My Work</Link>
                 </div>
                 <div className="headerSubtext columnHalf">
                     <p>Scroll down to see my design portfolio or view some of my other informatiom through my social media.</p>

@@ -31,6 +31,7 @@ body{
 
 .infoPanel{
   min-width: 200px;
+  padding-top: 115px;
 }
 
 .infoDescription{
