@@ -98,4 +98,15 @@
     animation-duration:1s;
 }
 
+@media screen and (max-width: 1200px) {
+
+  }
+  
+@media screen and (max-width: 600px) {
+    .card {
+        margin-left: 0;
+        margin-right: 0;
+    }
+}
+
 

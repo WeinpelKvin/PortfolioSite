@@ -14,10 +14,12 @@ class Header extends Component {
                 </div>
                 <div className="headerText column">
                     <h1>Kevin Weinpel</h1>
-                    <h2>UX / UI Designer in Dallas, Texas creating design, programming, and what falls in between.</h2>
+                    <h2>UX / UI Designer located in Dallas, Texas. Interested in design, programming, and what falls in between.</h2>
                     <Link to="/portfolio" className="button buttonHeader">See My Work</Link>
                 </div>
                 <div className="headerSubtext columnHalf">
+                    <p><strong>email</strong><br /> kevinweinpel@gmail.com</p>                    
+                    <p><strong>phone</strong><br /> 973-945-7056</p>
                     <p>Scroll down to see my design portfolio or view some of my other informatiom through my social media.</p>
                     <p>Thanks for stopping by</p>
                 </div>

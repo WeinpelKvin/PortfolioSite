@@ -149,14 +149,17 @@ body{
 }
 
 @media screen and (max-width: 600px) {
-
+  
 }
 
 @media screen and (max-width: 1200px) {
-
+  .card {
+    margin-left: 0;
+    margin-right: 0;
+  }
 
 }
 
 @media screen and (max-width: 600px) {
-
+  
 }

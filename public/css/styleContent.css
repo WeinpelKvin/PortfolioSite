@@ -79,6 +79,9 @@ body{
   .Contentwrapper{
     margin:0;
   }
+  .infoPanel {
+    padding-top: 0;
+  }
 }  
 
 @media all and (min-width: 800px) {
