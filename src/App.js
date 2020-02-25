@@ -10,6 +10,7 @@ import Header from './Components/Header.js';
 import Footer from './Components/Footer.js';
 import ProjectsComponent from './Components/ProjectsComponent';
 import ContentComponent from './Components/ContentComponent';
+import ScrollToTop from './Components/ScrollToTop';
 
 class App extends Component {
   render() {
@@ -96,19 +97,21 @@ class App extends Component {
       
     return (
       <Router>
-        <div className="wrapper">
-          <Navbar/>
-          
-          <Switch>
-            <Route exact path="/"><Home/></Route>
-            <Route path="/about"><About/></Route>
-            <Route path="/portfolio"><Portfolio/></Route>
-            <Route path="/resume"><Resume/></Route>
-            <Route path="/contentPage" component={ContentComponent}></Route>
-          </Switch>     
+        <ScrollToTop>
+          <div className="wrapper">
+            <Navbar/>
+            
+            <Switch>
+              <Route exact path="/"><ScrollToTop><Home/></ScrollToTop></Route>
+              <Route path="/about"><ScrollToTop><About/></ScrollToTop></Route>
+              <Route path="/portfolio"><ScrollToTop><Portfolio/></ScrollToTop></Route>
+              <Route path="/resume"><ScrollToTop><Resume/></ScrollToTop></Route>
+              <Route path="/contentPage" component={ContentComponent}></Route>
+            </Switch>     
 
-          <Footer Projects={Projects}/>
-        </div>
+            <Footer Projects={Projects}/>
+          </div>
+        </ScrollToTop>
       </Router>
     );
   }

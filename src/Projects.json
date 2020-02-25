@@ -77,12 +77,11 @@
         "shortDescription": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur bibendum placerat felis, sed iaculis velit fermentum sed. Mauris posuere, nisi a dignissim pharetra, nibh risus congue lectus, vel. ",
         "longDescription": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur bibendum placerat felis, sed iaculis velit fermentum sed. Mauris posuere, nisi a dignissim pharetra, nibh risus congue lectus, vel. ",
         "content": [  
-            "Images/Orbit/OrbitContent_1.png", 
+            "Images/RenzoPiano/RenzoPiano_PosterMockup2.jpg", 
             "paragraph about the image",
-            "Images/Orbit/OrbitContent_2.png", 
-            "Images/Orbit/OrbitContent_3.png", 
-            "Images/Orbit/OrbitContent_4.png", 
-            "Images/Orbit/OrbitContent_5.png"
+            "Images/RenzoPiano/RenzoPiano_BagMockup.jpg", 
+            "Images/RenzoPiano/RenzoPiano_RoadSign.jpg", 
+            "Images/RenzoPiano/RenzoPiano_SubwayPoster.jpg"
         ]
     },
     {

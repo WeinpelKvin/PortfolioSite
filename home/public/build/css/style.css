@@ -1,0 +1,156 @@
+@import url('https://fonts.googleapis.com/css?family=IBM+Plex+Mono|IBM+Plex+Sans|IBM+Plex+Sans+Condensed|IBM+Plex+Serif&display=swap');
+
+html{
+  font-family: 'IBM Plex Sans', sans-serif;
+  background: #333333;
+  margin:0;
+}
+body{
+  margin:0px;
+}
+
+.header {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  margin: 50px;
+  height: 100vh;
+}
+
+.handImage{
+  padding: 20px;
+  flex: 1;
+}
+
+/* Text */
+.headerText{
+  font-family: 'IBM Plex Sans Condensed', sans-serif;
+  font-size: 30px;
+  padding: 20px;
+  color: #74ddb1;
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+  flex-basis: 100%;
+  flex: 10
+}
+
+.columnHalf {
+  display: flex;
+  flex-direction: column;
+  flex-basis: 50%;
+  flex: 2
+}
+
+.headerText h1{
+  margin-top: 0;
+}
+
+.headerSubtext{
+  font-family: 'IBM Plex Sans Condensed', sans-serif;
+  padding: 20px;
+
+}
+
+.outlineText{
+  text-shadow:
+  -1px -1px 0 #ffffff,
+  1px -1px 0 #ffffff,
+  -1px 1px 0 #ffffff,
+  1px 1px 0 #ffffff;  
+}
+
+.footer {
+  background: lightgreen;
+}
+
+.main {
+  text-align: left;
+  background: #333333;
+}
+
+@media screen and (max-width: 600px) {
+  .aside { flex: 1 0 0; }
+}
+
+@media all and (min-width: 800px) {
+  .main    { flex: 3 0px; }
+  .aside-1 { order: 1; } 
+  .main    { order: 2; }
+  .aside-2 { order: 3; }
+  .footer  { order: 4; }
+}
+
+.wrapper {
+  display: flex;  
+  flex-flow: row wrap;
+  flex-grow: 1;
+  font-weight: bold;
+  justify-content: center;
+}
+
+.wrapper > * {
+  padding: 0px;
+  flex: 1 100%;
+}
+
+.contentContainer {
+  margin-top: 80px;
+}
+
+.phoneMenu{
+  overflow: hidden;
+  fill: white;
+  display: block;
+}
+
+.navbar .icon {
+  display: none;
+}
+
+.button {
+  text-align:left;
+  display: inline-block;
+  text-decoration: none;
+  border: 2px solid #EEEEEE;
+  border-radius: 5px;
+  margin-top: 15px;
+  color: #EEEEEE;
+  background: 0%;
+  padding: 10px 10px 10px 10px;
+}
+
+.button:hover{
+  transition-duration: 0.4s;
+  background-color: crimson;
+  color: white;
+}
+
+#container h3{
+  font-size: 15px;
+  font-weight: 200;
+  font-family: 'IBM Plex Sans Condensed', sans-serif;
+  margin:0;
+  color: #dbdbdb;
+}
+
+#container h4{
+  font-size: 20px;
+  text-align: left;
+  line-height: 0;
+}
+
+@media screen and (max-width: 600px) {
+
+}
+
+@media screen and (max-width: 1200px) {
+
+
+}
+
+@media screen and (max-width: 600px) {
+
+}

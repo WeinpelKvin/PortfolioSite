@@ -1,0 +1,101 @@
+.mainImages {
+    opacity: 1;
+    display: block;
+    width: 100%;
+    height: auto;
+    transition: .5s ease;
+    backface-visibility: hidden;
+    /*cursor: pointer;*/
+}
+
+.card .overlay {
+    transition: .5s ease;
+    opacity: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    text-align: center;
+  }
+  
+.card:hover .mainImages {
+    opacity: 0.3;
+}
+
+.card:hover .overlay {
+    opacity: 1;
+}
+
+.card p{
+    font-weight: 200;
+    line-height: 20px;
+}
+
+.card h1{
+    text-align: center;
+    line-height: 1em;
+    font-size: 40px;
+    font-family: 'IBM Plex Sans Condensed', sans-serif;
+    margin:0;
+}
+
+.card h3{
+    margin:0;
+    padding: 0;
+}
+
+.card {
+    width: 100%;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    position: relative;
+    z-index: 1;
+    color: white;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+    margin: 25px;
+    background-color: #333333;
+    padding:0;
+    text-align: left;
+    max-width: 45em;
+}
+
+@media screen and (max-width: 600px) {
+    .card p{
+        display: none;
+    }
+    .card overlay{
+        top: 70%;
+        left: 70%;
+    }
+    .card h1{
+        font-size: 25px;
+    }
+    .card h3{
+        font-size: 13px;
+        padding: 2px
+    }
+  }
+
+/* make keyframes that tell the start state and the end state of our object */
+@-webkit-keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+@-moz-keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+@keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+
+.fade-in {
+    opacity:0;  /* make things invisible upon start */
+    -webkit-animation:fadeIn ease-in 1;  /* call our keyframe named fadeIn, use animattion ease-in and repeat it only 1 time */
+    -moz-animation:fadeIn ease-in 1;
+    animation:fadeIn ease-in 1;
+
+    -webkit-animation-fill-mode:forwards;  /* this makes sure that after animation is done we remain at the last keyframe value (opacity: 1)*/
+    -moz-animation-fill-mode:forwards;
+    animation-fill-mode:forwards;
+
+    -webkit-animation-duration:1s;
+    -moz-animation-duration:1s;
+    animation-duration:1s;
+}
+
+

@@ -1,0 +1,91 @@
+body{
+  color: white;
+}
+
+.Contentwrapper {
+  display: flex;  
+  flex-flow: row wrap;
+  font-weight: 200;
+  text-align: center;
+  margin: 1em;
+  max-width: 1200px;
+}
+
+.Contentwrapper > * {
+  padding: 10px;
+  flex: 1 80%;
+}
+
+.main {
+  text-align: left;
+}
+
+.contentImages{
+  width: 100%;
+  margin: 25px 0 25px 0;
+}
+
+.contentImages:hover{
+  cursor: pointer;
+}
+
+.infoPanel{
+  min-width: 200px;
+}
+
+.infoDescription{
+  font-size: 14px;
+  text-align: left;
+}
+
+.infoButton{
+  margin-left: 20px;
+  margin-right: 20px;
+  padding: 10px 20px 10px 20px;
+}
+
+.btnFilled{
+  background-color: white;
+  color: #333333;
+  font-weight: 900;
+}
+
+.projectHeader{
+  font-size: 20px;
+  margin: 0;
+}
+
+@media all and (min-width: 600px) {
+  .aside { flex: 1 0 0; }
+  .aside-1 { order: 1; } 
+  .main    { order: 2; }
+  .aside-2 { order: 3; }
+  .footer  { order: 4; }
+
+  .Contentwrapper{
+    margin:0;
+  }
+  .main{
+    margin:0;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .aside-1 { order: 1; } 
+  .main    { order: 2; }
+  .footer  { order: 4; }
+  
+  .Contentwrapper{
+    margin:0;
+  }
+}  
+
+@media all and (min-width: 800px) {
+  .main    { flex: 3 0px; }
+  .aside-1 { order: 1; } 
+  .main    { order: 2; }
+  .aside-2 { order: 3; }
+  .footer  { order: 4; }
+}
+
+  

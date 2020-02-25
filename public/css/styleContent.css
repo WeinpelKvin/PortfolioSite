@@ -30,8 +30,8 @@ body{
 }
 
 .infoPanel{
-  min-width: 200px;
-  padding-top: 115px;
+  min-width: 250px;
+  padding-top: 115px;  
 }
 
 .infoDescription{
@@ -47,13 +47,21 @@ body{
 
 .btnFilled{
   background-color: white;
-  color: #333333;
+  color: #222222;
   font-weight: 900;
 }
 
 .projectHeader{
   font-size: 20px;
   margin: 0;
+}
+
+.arrow{
+  position: fixed;
+  bottom: 5%;
+  right: 5%;
+  z-index: 100px;
+  cursor: pointer;
 }
 
 @media all and (min-width: 600px) {
