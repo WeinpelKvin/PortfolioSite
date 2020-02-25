@@ -26,7 +26,7 @@ class NavBar extends Component{
         }
 
         var style = {
-            margin: '0 70px 0;'
+            margin: "0 70px 0"
         }
         return (
             <div className="navbar" id="Navbar">            

@@ -68,7 +68,7 @@ class ContentComponent extends Component{
                 const len = project.content[i].length;
                 let sub = project.content[i].substring(len-4, len);
                 if(sub === ".png" || sub === ".jpg"){
-                    contentList.push(<Image key={i} name={project.content[i]}/>)
+                    contentList.push(<Image id="myImg"key={i} name={project.content[i]}/>)
                 }else if(sub === " h1"){
                     contentList.push(<H1 key={i} name={project.content[i]}/>)
                 }else{
@@ -118,7 +118,7 @@ class ContentComponent extends Component{
                     </div>
                 </article>
                 <article className="aside aside-2 arrow" onClick={()=>{window.scrollTo({top: 0,left:0,behavior: 'smooth'})}}>
-                    <p>hi</p>
+                    <i className="fas fa-arrow-up fa-lg"></i>
                 </article>
             </div>
         )
