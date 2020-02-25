@@ -66,8 +66,8 @@ class ContentComponent extends Component{
             // Figures out what type of content is going to be rendered
             for (let i = 0; i < project.content.length; i++) {
                 const len = project.content[i].length;
-                let sub = project.content[i].substring(len-3, len);
-                if(sub === "png" || sub === "jpg"){
+                let sub = project.content[i].substring(len-4, len);
+                if(sub === ".png" || sub === ".jpg"){
                     contentList.push(<Image key={i} name={project.content[i]}/>)
                 }else if(sub === " h1"){
                     contentList.push(<H1 key={i} name={project.content[i]}/>)
@@ -116,6 +116,9 @@ class ContentComponent extends Component{
                         }} className="button infoButton">next</Link> 
                         <p className="infoDescription">{project.longDescription}</p>  
                     </div>
+                </article>
+                <article className="aside aside-2 arrow" onClick={()=>{window.scrollTo({top: 0,left:0,behavior: 'smooth'})}}>
+                    <p>hi</p>
                 </article>
             </div>
         )

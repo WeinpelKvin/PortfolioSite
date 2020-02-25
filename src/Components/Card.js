@@ -7,6 +7,7 @@ import Projects from '../Projects.json';
 class Card extends Component{
     render(){  
         const cardInfo = Projects[this.props.cardInfo.key];
+
         return (              
             <div className="card fade-in">
                 <img src={cardInfo.image} alt="" className="mainImages"/>

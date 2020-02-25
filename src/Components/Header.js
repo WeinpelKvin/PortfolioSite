@@ -14,7 +14,7 @@ class Header extends Component {
                 </div>
                 <div className="headerText column">
                     <h1>Kevin Weinpel</h1>
-                    <h2>UX / UI Designer located in Dallas, Texas. Interested in design, programming, and what falls in between.</h2>
+                    <h2>UX / UI Designer located in Dallas, Texas. Experienced in design, programming, and what falls in between.</h2>
                     <Link to="/portfolio" className="button buttonHeader">See My Work</Link>
                 </div>
                 <div className="headerSubtext columnHalf">
