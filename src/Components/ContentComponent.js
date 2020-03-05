@@ -3,6 +3,7 @@ import '../../public/css/styleContent.css';
 import '../../public/css/style.css'; 
 import '../../public/css/Card.css';
 import {Link} from "react-router-dom";
+import arrow from "../../public/Images/Icons/Arrow.svg"
 import Projects from '../Projects.json';   
 
 class ContentComponent extends Component{
@@ -117,9 +118,7 @@ class ContentComponent extends Component{
                         <p className="infoDescription">{project.longDescription}</p>  
                     </div>
                 </article>
-                <article className="aside aside-2 arrow" onClick={()=>{window.scrollTo({top: 0,left:0,behavior: 'smooth'})}}>
-                    <i className="fas fa-arrow-up fa-lg"></i>
-                </article>
+                <img className="arrow" src={arrow} alt="" onClick={()=>{window.scrollTo({top: 0, left:0, behavior: 'smooth'})}}></img>
             </div>
         )
     }
