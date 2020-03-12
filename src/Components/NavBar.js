@@ -25,12 +25,9 @@ class NavBar extends Component{
             }
         }
 
-        var style = {
-            margin: "0 70px 0"
-        }
         return (
             <div className="navbar" id="Navbar">            
-                <div style={style}>
+                <div>
                     <Link to="/" className="navHome">Kevin Weinpel</Link>
                     <Link to="/portfolio" className="navItem" onClick={collapse}>Portfolio</Link>
                     <Link to="/about" className="navItem" onClick={collapse}>About</Link>

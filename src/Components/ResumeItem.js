@@ -12,7 +12,7 @@ const ResumeItem = (props) => {
         const items = [];
         for (let i=0; i < props.responsibilities.length; i++) items.push(<ListItem element={props.responsibilities[i]} key={i}/>)
         return(
-            <ul>{items}</ul>
+            <ul className="responsibilities">{items}</ul>
         )
     }
 
