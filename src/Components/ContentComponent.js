@@ -1,4 +1,4 @@
-import React, {Component} from 'react';
+import React, {Component, useState} from 'react';
 import '../../public/css/styleContent.css'; 
 import '../../public/css/style.css'; 
 import '../../public/css/Card.css';
@@ -15,6 +15,7 @@ class ContentComponent extends Component{
 
         // Determines the current, next, or previous project in array
         const project = Projects[this.props.location.params.key];
+        const [image, setImage] = userState("");
         let nextProject;
         let previousProject;
 
