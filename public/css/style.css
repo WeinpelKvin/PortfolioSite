@@ -162,6 +162,35 @@ body{
   line-height: 0;
 }
 
+.modal{
+  background-color: black;
+  left: 0;
+  top: 0;
+  z-index: 10;
+  display: none;
+  position: fixed;
+  height: 100%;
+  width: 100%;
+}
+.modal-image {
+  z-index: 15;
+}
+
+.modal-content {
+  padding: 0;
+  max-width: 1200px;
+  margin: 10px auto 20px;
+}
+
+.modalImage {
+  width: 100%;
+}
+
+.wrapper{
+  display: flex;
+  justify-content: center;
+}
+
 @media screen and (max-width: 600px) {
   .headerText{
     font-size: medium;
