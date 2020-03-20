@@ -2,14 +2,18 @@ import React, {Component} from 'react';
 import '../../public/css/styleContent.css'; 
 import '../../public/css/style.css'; 
 import '../../public/css/Card.css';
-import {Link} from "react-router-dom";
+import { Link } from "react-router-dom";
+
 import arrow from "../../public/Images/Icons/Arrow.svg"
 import Projects from '../Projects.json';
+import Image from '../Components/ProjectContent/Image'
+import H1 from '../Components/ProjectContent/H1';
+import Pg from '../Components/ProjectContent/Pg';
 
 class ContentComponent extends Component{
     constructor(props) {
         super(props);
-        this.state = {image: "Images/Orbit/OrbitContent_2.png"};
+        this.state = { image: "Images/Orbit/OrbitContent_2.png" };
         
     }
 
@@ -38,27 +42,16 @@ class ContentComponent extends Component{
             document.getElementById("imageModal").style.display = "none";
         }
         
-        function ModalPopUp(name, key) {
-            // console.log(this)
-            // this.setState({image: name})
-            // console.log(name)
-            document.getElementById("imageModal").style.display = "block";
+        // function ModalPopUp(name, key) {
+        //     // console.log(this)
+        //     // this.setState({image: name})
+        //     // console.log(name)
+        //     document.getElementById("imageModal").style.display = "block";
             
-        }
+        // }
         
         const RenderContent=()=>{
             const contentList = [];
-
-            const Image=(props)=>{
-                console.log(props.name)
-                return(<img src={props.name} className="contentImages" alt={props.name} onClick={()=>{ModalPopUp(props.name, props.imageKey)}} />)
-            }
-            const Pg = (props) =>{
-                return(<p>{props.name}</p>)
-            }
-            const H1 = (props) =>{
-                return(<h1>(props.name)</h1>)
-            }
 
             // Figures out what type of content is going to be rendered
             let imageKey = 0;
