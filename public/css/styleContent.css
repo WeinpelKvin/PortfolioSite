@@ -25,6 +25,12 @@ body{
   margin: 25px 0 25px 0;
 }
 
+.contentImagesVertical{
+  margin: 25px 0 25px 0;
+  width: auto;
+  max-height: 80vh;
+}
+
 .contentImages:hover{
   cursor: pointer;
 }

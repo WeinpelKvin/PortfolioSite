@@ -12,6 +12,11 @@ const RenderContent = (project) => {
         const len = project.content[i].length;
         let sub = project.content[i].substring(len-4, len);
         if(sub === ".png" || sub === ".jpg"){
+            if (project.content[i].width() > project.content[i].height()) {
+                project.content[i].addClass("Horizontal");
+            } else {
+                project.content[i].addClass("Vertical");
+            }
             contentList.push(<Image id="myImg" key={i} imageKey={imageKey} name={project.content[i]}/>)
             imageKey++;
         }else if(sub === "  h1"){

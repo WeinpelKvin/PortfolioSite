@@ -46,12 +46,22 @@ class ContentComponent extends Component{
         //     // console.log(this)
         //     // this.setState({image: name})
         //     // console.log(name)
-        //     document.getElementById("imageModal").style.display = "block";
+        //     console.log("hi")
+        //     // document.getElementById("imageModal").style.display = "block";
             
         // }
         
-        const RenderContent=()=>{
+        const RenderContent = () => {
             const contentList = [];
+
+            // ModalPopUp = (name, key) => {
+            //     // console.log(this)
+            //     // this.setState({image: name})
+            //     // console.log(name)
+            //     console.log("hi")
+            //     // document.getElementById("imageModal").style.display = "block";
+                
+            // }
 
             // Figures out what type of content is going to be rendered
             let imageKey = 0;
@@ -59,7 +69,7 @@ class ContentComponent extends Component{
                 const len = project.content[i].length;
                 let sub = project.content[i].substring(len-4, len);
                 if(sub === ".png" || sub === ".jpg"){
-                    contentList.push(<Image id="myImg" key={i} imageKey={imageKey} name={project.content[i]}/>)
+                    contentList.push(<Image id="myImg" key={i} imageKey={imageKey} name={project.content[i]} />)
                     imageKey++;
                 }else if(sub === " h1"){
                     contentList.push(<H1 key={i} name={project.content[i]}/>)
