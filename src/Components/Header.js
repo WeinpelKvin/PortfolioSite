@@ -7,13 +7,14 @@ class Header extends Component {
         const ImageStyle = {
             width: '100px',
         };
+        const Me = "Kevin Weinpel"
         return (
             <header className="header">
                 <div className="handImage columnHalf">
                     <img src="https://www.factsonhand.com/images/1/hand-nodules@3x_1113x1020.png" style={ImageStyle} alt=""></img>
                 </div>
                 <div className="headerText column">
-                    <h1>Kevin Weinpel</h1>
+                    <h1>{Me}</h1>
                     <h2>UX / UI Designer located in Dallas, Texas. Experienced in design, programming, and what falls in between.</h2>
                     <Link to="/portfolio" className="button buttonHeader">See My Work</Link>
                 </div>

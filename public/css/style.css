@@ -172,12 +172,13 @@ body{
   height: 100%;
   width: 100%;
 }
+
 .modal-image {
   z-index: 15;
 }
 
 .modal-content {
-  padding: 0;
+  padding: 0px;
   max-width: 1200px;
   margin: 10px auto 20px;
 }

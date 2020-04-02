@@ -4,6 +4,7 @@ import '../../public/css/style.css';
 import '../../public/css/Card.css';
 import { Link } from "react-router-dom";
 import arrow from "../../public/Images/Icons/Arrow.svg"
+import close from "../../public/Images/Icons/close.svg"
 import Projects from '../Projects.json';
 import H1 from '../Components/ProjectContent/H1';
 import Pg from '../Components/ProjectContent/Pg';
@@ -19,6 +20,8 @@ class ContentComponent extends Component{
         this.setState({image: name})
         document.getElementById("imageModal").style.display = "block";            
     }
+
+    imgEl = React.createRef();
 
     render() {  
         // Determines the current, next, or previous project in array
@@ -51,9 +54,20 @@ class ContentComponent extends Component{
         for (let i = 0; i < project.content.length; i++) {
             const len = project.content[i].length;
             let sub = project.content[i].substring(len-4, len);
+            
+            //let imageSize = 0;
 
             if(sub === ".png" || sub === ".jpg"){
-                contentList.push(<img src={project.content[i]} key={i} className="contentImages" alt={project.content[i]} onClick={()=>{this.ModalPopUp(project.content[i])}}/>)
+                contentList.push(
+                    <img 
+                        src={project.content[i]} 
+                        key={i} 
+                        className="contentImages" 
+                        alt={project.content[i]} 
+                        onClick={()=>{this.ModalPopUp(project.content[i])}}
+                        ref={this.imgEl}
+                        onLoad={() => console.log(this.imgEl.current.height)}
+                    />)
             }else if(sub === " h1"){
                 contentList.push(<H1 key={i} name={project.content[i]}/>)
             }else{
@@ -61,38 +75,11 @@ class ContentComponent extends Component{
             }
         }
 
-        // const RenderContent = () => {
-        //     const contentList = [];
-
-        //     // Figures out what type of content is going to be rendered
-        //     let imageKey = 0;
-        //     for (let i = 0; i < project.content.length; i++) {
-        //         const len = project.content[i].length;
-        //         let sub = project.content[i].substring(len-4, len);
-        //         if(sub === ".png" || sub === ".jpg"){
-        //             contentList.push(<Image id="myImg" key={i} imageKey={imageKey} name={project.content[i]} />)
-        //             imageKey++;
-        //         }else if(sub === " h1"){
-        //             contentList.push(<H1 key={i} name={project.content[i]}/>)
-        //         }else{
-        //             contentList.push(<Pg key={i} name={project.content[i]}/>)
-        //         }
-        //     }
-        //     return(
-        //         <div className="main">
-        //             <div className="projectHeader">
-        //                 <h1>{project.name}</h1>
-        //             </div>
-        //             {contentList}
-        //         </div>
-        //     )
-        // }
-
         return (    
             <div className="Contentwrapper">
                 <div id="imageModal" className="modal">
                     <div className="modal-content">
-                        <button onClick={()=>{CloseModal()}}>Close</button>
+                        <img src={close} alt={"x"} onClick={()=>{CloseModal()}} className="close"/>
                         <img className="modalImage" src={this.state.image} alt="Orbit" />
                     </div>
                 </div>   
