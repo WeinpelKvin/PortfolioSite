@@ -90,12 +90,14 @@ class ContentComponent extends Component{
                         </div>
                     </div>   
                     <div className="main">
-                        <div className="Contentwrapper">
-                            <div><h3>My Role</h3>
-                                <p></p>
+                        <div className="containerSmall">
+                            <div className="item">
+                                <h3>Overview</h3>
+                                <p>{project.longDescription}</p>
                             </div>
-                            <div><h3>Overview</h3>
-                                <p></p>
+                            <div className="item">
+                                <h3>My Role</h3>
+                                <p>{project.longDescription}</p>
                             </div>
                         </div>
                         {contentList}
