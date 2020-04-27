@@ -89,14 +89,7 @@ class App extends Component {
           shortDescription: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur bibendum placerat felis, sed iaculis velit fermentum sed. Mauris posuere, nisi a dignissim pharetra, nibh risus congue lectus, vel. ",
           longDescription: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur bibendum placerat felis, sed iaculis velit fermentum sed. Mauris posuere, nisi a dignissim pharetra, nibh risus congue lectus, vel. ",
     }];
-
-
-    window.scroll(function() { 
-      const nav = document.getElementsById('Navbar');
-      console.log(nav + "yes");
-    });
-    
-      
+       
     return (
       <Router>
         <ScrollToTop>

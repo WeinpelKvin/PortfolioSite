@@ -62,7 +62,7 @@ class ContentComponent extends Component{
                     <img 
                         src={project.content[i]} 
                         key={i} 
-                        className="contentImages" 
+                        className="contentImages Images" 
                         alt={project.content[i]} 
                         onClick={()=>{this.ModalPopUp(project.content[i])}}
                         ref={this.imgEl}
@@ -75,52 +75,72 @@ class ContentComponent extends Component{
             }
         }
 
-        return (    
-            <div className="Contentwrapper">
-                <div id="imageModal" className="modal">
-                    <div className="modal-content">
-                        <img src={close} alt={"x"} onClick={()=>{CloseModal()}} className="close"/>
-                        <img className="modalImage" src={this.state.image} alt="Orbit" />
-                    </div>
-                </div>   
-                <div className="main">
+        return (
+            <div>  
+                <div className="LandingImage">
                     <div className="projectHeader">
-                        <h1>{project.name}</h1>
+                        <h1 className="title">{project.name}</h1>
                     </div>
-                    {contentList}
                 </div>
-                <article className="aside aside-1">
-                    <div className="infoPanel">
-                        <Link to={{
-                            pathname: "/contentPage",
-                            params: {   
-                                key: previousProject,
-                                name: Projects[previousProject].name,
-                                image: Projects[previousProject].image,
-                                type: Projects[previousProject].type,
-                                shortDescription: Projects[previousProject].shortDescription,
-                                longDescription: Projects[previousProject].longDescription,
-                                content: Projects[previousProject].content
-                            }
-                        }} className="button infoButton">prev</Link>      
-                        <Link to={{
-                            pathname: "/contentPage",
-                            params: {   
-                                key: nextProject,
-                                name: Projects[nextProject].name,
-                                image: Projects[nextProject].image,
-                                type: Projects[nextProject].type,
-                                shortDescription: Projects[nextProject].shortDescription,
-                                longDescription: Projects[nextProject].longDescription,
-                                content: Projects[nextProject].content
-                            }
-                        }} className="button infoButton">next</Link> 
-                        <p className="infoDescription">{project.longDescription}</p>  
+                <div className="Contentwrapper">
+                    <div id="imageModal" className="modal">
+                        <div className="modal-content">
+                            <img src={close} alt={"x"} onClick={()=>{CloseModal()}} className="close"/>
+                            <img className="modal-image" src={this.state.image} alt="Orbit" />
+                        </div>
+                    </div>   
+                    <div className="main">
+                        <div className="Contentwrapper">
+                            <div><h3>My Role</h3>
+                                <p></p>
+                            </div>
+                            <div><h3>Overview</h3>
+                                <p></p>
+                            </div>
+                        </div>
+                        {contentList}
                     </div>
-                    <p>hi</p>
-                </article>
-                <img className="arrow" src={arrow} alt="" onClick={()=>{window.scrollTo({top: 0, left:0, behavior: 'smooth'})}}></img>
-            </div>
+                    <article className="aside aside-1">
+                        <div className="infoPanel">
+                            <Link to={{
+                                pathname: "/contentPage",
+                                params: {   
+                                    key: previousProject,
+                                    name: Projects[previousProject].name,
+                                    image: Projects[previousProject].image,
+                                    type: Projects[previousProject].type,
+                                    shortDescription: Projects[previousProject].shortDescription,
+                                    longDescription: Projects[previousProject].longDescription,
+                                    content: Projects[previousProject].content
+                                }
+                            }} className="button infoButton">prev</Link>      
+                            <Link to={{
+                                pathname: "/contentPage",
+                                params: {   
+                                    key: nextProject,
+                                    name: Projects[nextProject].name,
+                                    image: Projects[nextProject].image,
+                                    type: Projects[nextProject].type,
+                                    shortDescription: Projects[nextProject].shortDescription,
+                                    longDescription: Projects[nextProject].longDescription,
+                                    content: Projects[nextProject].content
+                                }
+                            }} className="button infoButton">next</Link> 
+                            <p className="infoDescription">{project.longDescription}</p>
+                            <div className="infoSubTitle">
+                                <p className="title"><i>Duration:</i></p>
+                                <p className="content">3 months</p>
+                            </div>
+                            <div className="infoSubTitle">
+                                <p className="title"><i>Duration:</i></p>
+                                <p className="content">3 months</p>
+                            </div>
+                            
+                        </div>
+                    </article>
+                    <img className="arrow" src={arrow} alt="" onClick={()=>{window.scrollTo({top: 0, left:0, behavior: 'smooth'})}}></img>
+                </div>
+            </div>  
         )
     }
 }
