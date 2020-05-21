@@ -13,7 +13,7 @@ body{
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
-  margin: 50px;
+  margin: 150px;
   height: 100vh;
 }
 
@@ -160,31 +160,6 @@ body{
   font-size: 20px;
   text-align: left;
   line-height: 0;
-}
-
-.modal{
-  background-color: black;
-  left: 0;
-  top: 0;
-  z-index: 10;
-  display: none;
-  position: fixed;
-  height: 100%;
-  width: 100%;
-}
-
-.modal-image {
-  z-index: 15;
-}
-
-.modal-content {
-  padding: 0px;
-  max-width: 1200px;
-  margin: 10px auto 20px;
-}
-
-.modalImage {
-  width: 100%;
 }
 
 .wrapper{
