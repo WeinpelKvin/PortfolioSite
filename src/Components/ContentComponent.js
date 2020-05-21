@@ -68,9 +68,9 @@ class ContentComponent extends Component{
                         ref={this.imgEl}
                         onLoad={() => console.log(this.imgEl.current.height)}
                     />)
-            }else if(sub === " h1"){
+            } else if(sub === " h1"){
                 contentList.push(<H1 key={i} name={project.content[i]}/>)
-            }else{
+            } else{
                 contentList.push(<Pg key={i} name={project.content[i]}/>)
             }
         }

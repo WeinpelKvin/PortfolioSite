@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import {Link} from "react-router-dom";
 import '../../public/css/style.css' 
+import Mug from '../../public/Images/Icons/mug.svg'
     
 class Header extends Component {
     render() {
@@ -11,7 +12,7 @@ class Header extends Component {
         return (
             <header className="header">
                 <div className="handImage columnHalf">
-                    <img src="https://www.factsonhand.com/images/1/hand-nodules@3x_1113x1020.png" style={ImageStyle} alt=""></img>
+                    <img src={Mug} style={ImageStyle} alt=""></img>
                 </div>
                 <div className="headerText column">
                     <h1>{Me}</h1>
